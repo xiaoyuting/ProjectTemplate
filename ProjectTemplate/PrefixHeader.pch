@@ -1,0 +1,28 @@
+//
+//  PrefixHeader.pch
+//  ProjectTemplate
+//
+//  Created by 雨停 on 2017/9/28.
+//  Copyright © 2017年 yuting. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+//全局宏
+#import "UtilsMacros.h"
+#import "URLMacros.h"
+#import "FontAndColorMacros.h"
+#import "ThirdMacros.h"
+#import "CommonMacros.h"
+
+
+#import <MBProgressHUD.h>
+#import <YYKit.h>
+
+#import "AppDelegate+AppService.h"
+#import "MBProgressHUD+MB.h"
+#import "RequestManager.h"
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
