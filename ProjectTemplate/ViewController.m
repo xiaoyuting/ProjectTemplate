@@ -7,24 +7,33 @@
 //
 
 #import "ViewController.h"
+#import "viewModel.h"
 #import "UITapGestureRecognizer+Block.h"
-@interface ViewController ()
+#import "HomeTableViewCell.h"
+#import "UIImageView+WebCache.h"
+@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UITableView *tab;
 @property (nonatomic,assign)    int a ;
+@property (nonatomic,strong)   NSMutableArray * dataArr;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
+    self.dataArr = [NSMutableArray array];
+    self.automaticallyAdjustsScrollViewInsets =NO;
     self.a=0;
     [super viewDidLoad];
     UIImageView * img = [[UIImageView alloc]initWithFrame:CGRectMake(0, 200, 200, 200)];
     img.userInteractionEnabled =YES;
     //img.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
-    [self.view addSubview:img];
+    //[self.view addSubview:img];
     img.backgroundColor = [UIColor redColor];
     [img addGestureRecognizer:[UITapGestureRecognizer getureRecognizerWithActionBlock:^(id gestureRecognizer) {
              NSLog(@"viewM点击事件-------");
     }]];
+    [self setRequest];
+    [self.tab setRowHeight:100];
     // Do any additional setup after loading the view, typically from a nib.
 }
 /*-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -78,11 +87,45 @@
     }
    self.a++;
 }*/
+-(void)setSubview{
+    
+}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+     return self.dataArr.count;
+}
+//-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+//    return self.dataArr.count;
+//}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *cellIde=@"cellIde";
+    HomeTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellIde];
+    if (!cell) {
+        cell=[[HomeTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIde];
+    }
+    
+    NSDictionary * dic  = self.dataArr[indexPath.row];
+   // [cell.imageView   ]
+    NSLog(@"%@",dic[@"newsImage"]);
+    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:dic[@"newsImage"]]   placeholderImage:nil];
+    return cell;
 
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+-(void)setRequest{
+    viewModel * model = [[viewModel alloc]init];
+    kWeakSelf(self);
+    [model DataWithSuccess:^(NSArray *arr) {
+        [weakself.dataArr removeAllObjects];
+        [weakself.dataArr addObjectsFromArray:arr];
+        dispatch_async(dispatch_get_main_queue(), ^{
+        [weakself.tab reloadData];
+        });
+    } failure:^(NSError *error) {
+        
+    }];
+}
 
 @end

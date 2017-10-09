@@ -17,6 +17,9 @@
 		0E0410A41F7D0653003657F8 /* RequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0410A11F7D0653003657F8 /* RequestManager.m */; };
 		0E0410A51F7D0653003657F8 /* UIImage+CompressImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0410A31F7D0653003657F8 /* UIImage+CompressImage.m */; };
 		0E0410AB1F8B0E51003657F8 /* UITapGestureRecognizer+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0410AA1F8B0E51003657F8 /* UITapGestureRecognizer+Block.m */; };
+		0E0410DE1F8B4994003657F8 /* model.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0410DD1F8B4994003657F8 /* model.m */; };
+		0E0410E11F8B4A3D003657F8 /* viewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0410E01F8B4A3D003657F8 /* viewModel.m */; };
+		0E0410E41F8B61D9003657F8 /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0410E31F8B61D9003657F8 /* HomeTableViewCell.m */; };
 		0E0ADCEF1F7CD22A009232F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0ADCEE1F7CD22A009232F8 /* main.m */; };
 		0E0ADCF21F7CD22A009232F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0ADCF11F7CD22A009232F8 /* AppDelegate.m */; };
 		0E0ADCF51F7CD22A009232F8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0ADCF41F7CD22A009232F8 /* ViewController.m */; };
@@ -73,12 +76,18 @@
 		0E0410A31F7D0653003657F8 /* UIImage+CompressImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+CompressImage.m"; path = "../UIImage+CompressImage.m"; sourceTree = "<group>"; };
 		0E0410A91F8B0E51003657F8 /* UITapGestureRecognizer+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITapGestureRecognizer+Block.h"; sourceTree = "<group>"; };
 		0E0410AA1F8B0E51003657F8 /* UITapGestureRecognizer+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITapGestureRecognizer+Block.m"; sourceTree = "<group>"; };
+		0E0410DC1F8B4994003657F8 /* model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = model.h; sourceTree = "<group>"; };
+		0E0410DD1F8B4994003657F8 /* model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = model.m; sourceTree = "<group>"; };
+		0E0410DF1F8B4A3D003657F8 /* viewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = viewModel.h; sourceTree = "<group>"; };
+		0E0410E01F8B4A3D003657F8 /* viewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = viewModel.m; sourceTree = "<group>"; };
+		0E0410E21F8B61D9003657F8 /* HomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewCell.h; sourceTree = "<group>"; };
+		0E0410E31F8B61D9003657F8 /* HomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewCell.m; sourceTree = "<group>"; };
 		0E0ADCEA1F7CD22A009232F8 /* ProjectTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E0ADCEE1F7CD22A009232F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0E0ADCF01F7CD22A009232F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
 		0E0ADCF11F7CD22A009232F8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../AppDelegate.m; sourceTree = "<group>"; };
-		0E0ADCF31F7CD22A009232F8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0E0ADCF41F7CD22A009232F8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0E0ADCF31F7CD22A009232F8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../ViewController.h; sourceTree = "<group>"; };
+		0E0ADCF41F7CD22A009232F8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../ViewController.m; sourceTree = "<group>"; };
 		0E0ADCF71F7CD22A009232F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0E0ADCF91F7CD22A009232F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E0ADCFC1F7CD22A009232F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -236,6 +245,42 @@
 			path = Appdelegate;
 			sourceTree = "<group>";
 		};
+		0E0410D81F8B4905003657F8 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				0E0410E21F8B61D9003657F8 /* HomeTableViewCell.h */,
+				0E0410E31F8B61D9003657F8 /* HomeTableViewCell.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		0E0410D91F8B4913003657F8 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				0E0410DC1F8B4994003657F8 /* model.h */,
+				0E0410DD1F8B4994003657F8 /* model.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		0E0410DA1F8B4930003657F8 /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				0E0410DF1F8B4A3D003657F8 /* viewModel.h */,
+				0E0410E01F8B4A3D003657F8 /* viewModel.m */,
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		0E0410DB1F8B4965003657F8 /* viewController */ = {
+			isa = PBXGroup;
+			children = (
+				0E0ADCF31F7CD22A009232F8 /* ViewController.h */,
+				0E0ADCF41F7CD22A009232F8 /* ViewController.m */,
+			);
+			path = viewController;
+			sourceTree = "<group>";
+		};
 		0E0ADCE11F7CD22A009232F8 = {
 			isa = PBXGroup;
 			children = (
@@ -262,10 +307,12 @@
 			isa = PBXGroup;
 			children = (
 				0E04107A1F7CD60A003657F8 /* Base */,
-				0E0ADCF31F7CD22A009232F8 /* ViewController.h */,
-				0E0ADCF41F7CD22A009232F8 /* ViewController.m */,
 				0E0410A91F8B0E51003657F8 /* UITapGestureRecognizer+Block.h */,
 				0E0410AA1F8B0E51003657F8 /* UITapGestureRecognizer+Block.m */,
+				0E0410DB1F8B4965003657F8 /* viewController */,
+				0E0410DA1F8B4930003657F8 /* viewmodel */,
+				0E0410D91F8B4913003657F8 /* model */,
+				0E0410D81F8B4905003657F8 /* view */,
 				0E0410A81F7D0781003657F8 /* Appdelegate */,
 				0E0410A71F7D072E003657F8 /* Request */,
 				0E0410A61F7D0716003657F8 /* Define */,
@@ -517,8 +564,11 @@
 				0E0ADCF21F7CD22A009232F8 /* AppDelegate.m in Sources */,
 				0E0410A51F7D0653003657F8 /* UIImage+CompressImage.m in Sources */,
 				0E0410821F7CD78F003657F8 /* RootBaseVC.m in Sources */,
+				0E0410E11F8B4A3D003657F8 /* viewModel.m in Sources */,
 				0E04109F1F7CF0A4003657F8 /* MBProgressHUD+MB.m in Sources */,
 				0E0410A41F7D0653003657F8 /* RequestManager.m in Sources */,
+				0E0410E41F8B61D9003657F8 /* HomeTableViewCell.m in Sources */,
+				0E0410DE1F8B4994003657F8 /* model.m in Sources */,
 				0E0410901F7CE8A4003657F8 /* OpenUDID.m in Sources */,
 				0E04107D1F7CD62B003657F8 /* baseModel.m in Sources */,
 				0E0ADCEF1F7CD22A009232F8 /* main.m in Sources */,
@@ -674,7 +724,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9VDDJ828HQ;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/yuting/Desktop/ProjectTemplate/ProjectTemplate/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/yuting/ProjectTemplate/ProjectTemplate/PrefixHeader.pch;
 				INFOPLIST_FILE = ProjectTemplate/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -690,7 +740,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9VDDJ828HQ;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/yuting/Desktop/ProjectTemplate/ProjectTemplate/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/yuting/ProjectTemplate/ProjectTemplate/PrefixHeader.pch;
 				INFOPLIST_FILE = ProjectTemplate/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
