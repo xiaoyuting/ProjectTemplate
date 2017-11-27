@@ -21,7 +21,6 @@ PODS:
   - MBProgressHUD (1.0.0)
   - MJRefresh (3.1.12)
   - SDAutoLayout (2.2.0)
-  - SDCycleScrollView (1.3)
   - SDWebImage (4.1.0):
     - SDWebImage/Core (= 4.1.0)
   - SDWebImage/Core (4.1.0)
@@ -37,7 +36,6 @@ DEPENDENCIES:
   - MBProgressHUD
   - MJRefresh
   - SDAutoLayout
-  - SDCycleScrollView
   - SDWebImage
   - YTKKeyValueStore
   - YYKit
@@ -49,11 +47,10 @@ SPEC CHECKSUMS:
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   SDAutoLayout: c5509e77ae75735d9a39f7bc83dba6d3f75d49d8
-  SDCycleScrollView: 90e43636fcc8e6a7f74e8b64d87418a8e96549b4
   SDWebImage: 0e435c14e402a6730315a0fb79f95e68654d55a4
   YTKKeyValueStore: 4d002941540dd5108fa23009b71e0f2f937f7a0f
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 3b56843485a2ec5943eab12bf317f7ba535423b2
+PODFILE CHECKSUM: 95c93847d53b848e1e27af35fded29d1283d7689
 
 COCOAPODS: 1.2.0

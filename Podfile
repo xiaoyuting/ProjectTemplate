@@ -7,6 +7,6 @@ pod 'MBProgressHUD'
 pod 'YTKKeyValueStore'
 pod 'YYKit'
 pod 'AFNetworking'
- pod 'SDAutoLayout'
- pod 'SDCycleScrollView'
+pod 'SDAutoLayout'
+
 end
