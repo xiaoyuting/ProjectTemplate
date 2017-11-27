@@ -17,7 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
- 
+    [self addNavigationVC];
+    [self setTabBarItemTheme];
 
     // Do any additional setup after loading the view.
 }
@@ -51,23 +52,24 @@
 -(void)addNavigationVC{
     
         
-    /*  NSArray *titleArr       = @[@"资讯",@"青训",@"赛事",@"我的"];
-        NSArray *vcNameArr      = @[@"infor",@"youth",@"match",@"me"];
+     NSArray *titleArr       = @[@"资讯",@"青训",@"赛事",@"我的"];
+        NSArray *vcNameArr      = @[@"main",@"info",@"activity",@"me"];
         NSArray *tabIconNameArr = @[@"i_infor",@"i_youth",@"i_match",@"i_me"];
         NSMutableArray *vcArr = [NSMutableArray array];
         for (NSInteger i = 0; i < titleArr.count ; i++) {
-            NSString *vcName = [NSString stringWithFormat: @"%@",vcNameArr[i]];
-            XYBaseVC *vc  = [[UIStoryboard  storyboardWithName:@"Main" bundle:nil]instantiateViewControllerWithIdentifier:vcName];;
-            NavigationVC  *nav = [[NavigationVC alloc]initWithRootViewController:vc];
-            nav.navigationBar.barTintColor=mainColor;
+            NSString *vcName = [NSString stringWithFormat: @"GM%@VC",vcNameArr[i]];
+            Class class = NSClassFromString(vcName);
+            RootBaseVC * vc  = [[class alloc]init];
+           RootBaseNav *nav = [[RootBaseNav alloc]initWithRootViewController:vc];
+           // nav.navigationBar.barTintColor=mainColor;
             nav.tabBarItem.title = titleArr[i];
-            nav.tabBarItem.image =Img(tabIconNameArr[i]);
-            nav.tabBarItem.selectedImage =  Img(tabIconNameArr[i]);
+            nav.tabBarItem.image = [UIImage  imageNamed:tabIconNameArr[i]];
+            nav.tabBarItem.selectedImage =  [UIImage  imageNamed:tabIconNameArr[i]];
             [vc.navigationController.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0, -4)];
             [vcArr   addObject:nav];
             
         }
-        self.viewControllers  = vcArr;*/
+        self.viewControllers  = vcArr;
          
     
 }

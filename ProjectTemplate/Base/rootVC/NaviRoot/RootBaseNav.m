@@ -24,10 +24,19 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    if (self.childViewControllers.count > 0) {
+        viewController.hidesBottomBarWhenPushed = YES;
+    }
+    [super pushViewController:viewController animated:animated];
+}
+
 -(void)setupNavigationBar{
     
     [[UINavigationBar appearance] setBarTintColor:[UIColor redColor]];
-    UIImage *bgImage = [self imageWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 64) alphe:1.0 color:[UIColor redColor]];
+    UIImage *bgImage = [self imageWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [self naviBarH]) alphe:1.0 color:[UIColor redColor]];
     [[UINavigationBar appearance] setBackgroundImage:bgImage forBarMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setTitleTextAttributes:@{
                                                            NSFontAttributeName:[UIFont boldSystemFontOfSize:18],
@@ -50,7 +59,23 @@
     UIGraphicsEndImageContext();
     return theImage;
 }
+-(CGFloat)naviBarH{
+    CGFloat  h = 0;
+   
+    // 状态栏(statusbar)
+    
+    CGRect StatusRect = [[UIApplication sharedApplication] statusBarFrame];
+    
+    //标题栏
+    
+    CGRect NavRect = self.navigationBar.frame;
+    
+    h= StatusRect.size.height+NavRect.size.height;
+    
+    return h;
+    
 
+}
 /*
 #pragma mark - Navigation
 

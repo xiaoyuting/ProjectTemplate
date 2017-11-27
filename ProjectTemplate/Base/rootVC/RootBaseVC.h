@@ -39,4 +39,6 @@
 - (void)loadMoreData ;
 
 - (void)setSubviews ;
+- (CGFloat)naviGationH;
+
 @end

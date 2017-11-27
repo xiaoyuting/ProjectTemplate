@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.view setBackgroundColor:[UIColor whiteColor]];
     // Do any additional setup after loading the view.
 }
 
@@ -165,5 +166,19 @@
 - (void)setSubviews {
     
 }
-
+- (CGFloat)naviGationH{
+    CGFloat h =0;
+    // 状态栏(statusbar)
+    
+    CGRect StatusRect = [[UIApplication sharedApplication] statusBarFrame];
+    
+    //标题栏
+    
+    CGRect NavRect = self.navigationController.navigationBar.frame;
+    
+    h= StatusRect.size.height+NavRect.size.height;
+    
+    return h;
+    
+}
 @end

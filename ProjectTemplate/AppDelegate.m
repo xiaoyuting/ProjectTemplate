@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "RootBaseBar.h"
 @interface AppDelegate ()
 
 @end
@@ -21,7 +21,7 @@
     //初始化window
    // [self initWindow];
        
-   
+    self.window.rootViewController = [[RootBaseBar alloc]init];
     
     //初始化app服务
     //[self initService];

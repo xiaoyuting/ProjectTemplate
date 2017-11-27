@@ -28,6 +28,12 @@
 		0E0ADCFD1F7CD22A009232F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E0ADCFB1F7CD22A009232F8 /* LaunchScreen.storyboard */; };
 		0E0ADD081F7CD22A009232F8 /* ProjectTemplateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0ADD071F7CD22A009232F8 /* ProjectTemplateTests.m */; };
 		0E0ADD131F7CD22A009232F8 /* ProjectTemplateUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0ADD121F7CD22A009232F8 /* ProjectTemplateUITests.m */; };
+		0ECDC7DF1FCAF9D300FA4424 /* WRCustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECDC7DC1FCAF9D200FA4424 /* WRCustomNavigationBar.m */; };
+		0ECDC7E01FCAF9D300FA4424 /* WRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECDC7DE1FCAF9D200FA4424 /* WRNavigationBar.m */; };
+		0ECDC7EE1FCB086B00FA4424 /* GMmainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECDC7ED1FCB086B00FA4424 /* GMmainVC.m */; };
+		0ECDC7F11FCB087D00FA4424 /* GMinfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECDC7F01FCB087D00FA4424 /* GMinfoVC.m */; };
+		0ECDC7F41FCB089700FA4424 /* GMmeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECDC7F31FCB089700FA4424 /* GMmeVC.m */; };
+		0ECDC7F71FCB08D500FA4424 /* GMactivityVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECDC7F61FCB08D500FA4424 /* GMactivityVC.m */; };
 		EEBB49B88E9392129531F431 /* libPods-ProjectTemplate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A1FE9D5704539AB8B5446B /* libPods-ProjectTemplate.a */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +105,18 @@
 		0E0ADD121F7CD22A009232F8 /* ProjectTemplateUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProjectTemplateUITests.m; sourceTree = "<group>"; };
 		0E0ADD141F7CD22A009232F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E0ADD201F7CD28F009232F8 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		0ECDC7DB1FCAF9D200FA4424 /* WRCustomNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRCustomNavigationBar.h; sourceTree = "<group>"; };
+		0ECDC7DC1FCAF9D200FA4424 /* WRCustomNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRCustomNavigationBar.m; sourceTree = "<group>"; };
+		0ECDC7DD1FCAF9D200FA4424 /* WRNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRNavigationBar.h; sourceTree = "<group>"; };
+		0ECDC7DE1FCAF9D200FA4424 /* WRNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRNavigationBar.m; sourceTree = "<group>"; };
+		0ECDC7EC1FCB086B00FA4424 /* GMmainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMmainVC.h; sourceTree = "<group>"; };
+		0ECDC7ED1FCB086B00FA4424 /* GMmainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMmainVC.m; sourceTree = "<group>"; };
+		0ECDC7EF1FCB087D00FA4424 /* GMinfoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMinfoVC.h; sourceTree = "<group>"; };
+		0ECDC7F01FCB087D00FA4424 /* GMinfoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMinfoVC.m; sourceTree = "<group>"; };
+		0ECDC7F21FCB089700FA4424 /* GMmeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMmeVC.h; sourceTree = "<group>"; };
+		0ECDC7F31FCB089700FA4424 /* GMmeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMmeVC.m; sourceTree = "<group>"; };
+		0ECDC7F51FCB08D500FA4424 /* GMactivityVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMactivityVC.h; sourceTree = "<group>"; };
+		0ECDC7F61FCB08D500FA4424 /* GMactivityVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMactivityVC.m; sourceTree = "<group>"; };
 		65A1FE9D5704539AB8B5446B /* libPods-ProjectTemplate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ProjectTemplate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -187,6 +205,7 @@
 		0E04108C1F7CE85E003657F8 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				0ECDC7DA1FCAF9D200FA4424 /* WRNavigationBar */,
 				0E0410991F7CEFEF003657F8 /* MBProgressHUD */,
 				0E04108D1F7CE897003657F8 /* OpenUDID */,
 			);
@@ -306,6 +325,7 @@
 		0E0ADCEC1F7CD22A009232F8 /* ProjectTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				0ECDC7E51FCB080A00FA4424 /* ViewController */,
 				0E04107A1F7CD60A003657F8 /* Base */,
 				0E0410A91F8B0E51003657F8 /* UITapGestureRecognizer+Block.h */,
 				0E0410AA1F8B0E51003657F8 /* UITapGestureRecognizer+Block.m */,
@@ -351,6 +371,33 @@
 				0E0ADD141F7CD22A009232F8 /* Info.plist */,
 			);
 			path = ProjectTemplateUITests;
+			sourceTree = "<group>";
+		};
+		0ECDC7DA1FCAF9D200FA4424 /* WRNavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				0ECDC7DB1FCAF9D200FA4424 /* WRCustomNavigationBar.h */,
+				0ECDC7DC1FCAF9D200FA4424 /* WRCustomNavigationBar.m */,
+				0ECDC7DD1FCAF9D200FA4424 /* WRNavigationBar.h */,
+				0ECDC7DE1FCAF9D200FA4424 /* WRNavigationBar.m */,
+			);
+			path = WRNavigationBar;
+			sourceTree = "<group>";
+		};
+		0ECDC7E51FCB080A00FA4424 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0ECDC7EF1FCB087D00FA4424 /* GMinfoVC.h */,
+				0ECDC7F01FCB087D00FA4424 /* GMinfoVC.m */,
+				0ECDC7EC1FCB086B00FA4424 /* GMmainVC.h */,
+				0ECDC7ED1FCB086B00FA4424 /* GMmainVC.m */,
+				0ECDC7F21FCB089700FA4424 /* GMmeVC.h */,
+				0ECDC7F31FCB089700FA4424 /* GMmeVC.m */,
+				0ECDC7F51FCB08D500FA4424 /* GMactivityVC.h */,
+				0ECDC7F61FCB08D500FA4424 /* GMactivityVC.m */,
+			);
+			name = ViewController;
+			path = ../../Desktop/ViewController;
 			sourceTree = "<group>";
 		};
 		239F2425AE866A23533FD4F8 /* Frameworks */ = {
@@ -435,12 +482,12 @@
 		0E0ADCE21F7CD22A009232F8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = yuting;
 				TargetAttributes = {
 					0E0ADCE91F7CD22A009232F8 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 9VDDJ828HQ;
+						DevelopmentTeam = 85AV7L542H;
 						ProvisioningStyle = Automatic;
 					};
 					0E0ADD021F7CD22A009232F8 = {
@@ -560,16 +607,22 @@
 				0E0410881F7CDF02003657F8 /* RootBaseNav.m in Sources */,
 				0E0ADCF51F7CD22A009232F8 /* ViewController.m in Sources */,
 				0E04108B1F7CDFAF003657F8 /* RootBaseBar.m in Sources */,
+				0ECDC7F11FCB087D00FA4424 /* GMinfoVC.m in Sources */,
 				0E0410931F7CEAB0003657F8 /* AppDelegate+AppService.m in Sources */,
 				0E0ADCF21F7CD22A009232F8 /* AppDelegate.m in Sources */,
 				0E0410A51F7D0653003657F8 /* UIImage+CompressImage.m in Sources */,
 				0E0410821F7CD78F003657F8 /* RootBaseVC.m in Sources */,
+				0ECDC7EE1FCB086B00FA4424 /* GMmainVC.m in Sources */,
+				0ECDC7F41FCB089700FA4424 /* GMmeVC.m in Sources */,
+				0ECDC7DF1FCAF9D300FA4424 /* WRCustomNavigationBar.m in Sources */,
 				0E0410E11F8B4A3D003657F8 /* viewModel.m in Sources */,
 				0E04109F1F7CF0A4003657F8 /* MBProgressHUD+MB.m in Sources */,
+				0ECDC7F71FCB08D500FA4424 /* GMactivityVC.m in Sources */,
 				0E0410A41F7D0653003657F8 /* RequestManager.m in Sources */,
 				0E0410E41F8B61D9003657F8 /* HomeTableViewCell.m in Sources */,
 				0E0410DE1F8B4994003657F8 /* model.m in Sources */,
 				0E0410901F7CE8A4003657F8 /* OpenUDID.m in Sources */,
+				0ECDC7E01FCAF9D300FA4424 /* WRNavigationBar.m in Sources */,
 				0E04107D1F7CD62B003657F8 /* baseModel.m in Sources */,
 				0E0ADCEF1F7CD22A009232F8 /* main.m in Sources */,
 				0E0410AB1F8B0E51003657F8 /* UITapGestureRecognizer+Block.m in Sources */,
@@ -637,7 +690,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -645,7 +700,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -685,7 +744,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -693,7 +754,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -722,7 +787,7 @@
 			baseConfigurationReference = 05794AB52E0AA51D77949FC5 /* Pods-ProjectTemplate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9VDDJ828HQ;
+				DEVELOPMENT_TEAM = 85AV7L542H;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = /Users/yuting/ProjectTemplate/ProjectTemplate/PrefixHeader.pch;
 				INFOPLIST_FILE = ProjectTemplate/Info.plist;
@@ -738,7 +803,7 @@
 			baseConfigurationReference = 03397658B930F37387651DA7 /* Pods-ProjectTemplate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9VDDJ828HQ;
+				DEVELOPMENT_TEAM = 85AV7L542H;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = /Users/yuting/ProjectTemplate/ProjectTemplate/PrefixHeader.pch;
 				INFOPLIST_FILE = ProjectTemplate/Info.plist;
