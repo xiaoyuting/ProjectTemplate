@@ -35,6 +35,37 @@
 }
 
 
+-(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    NSLog(@"host==%@",[url host]);
+    NSLog(@"path==%@",[url path]);
+    
+        if([[url host] isEqualToString:@"deeplink"]) {
+            if([[url path] isEqualToString:@"/page1"]) {
+               // self.window.rootViewController = [[Page1ViewController alloc] init];
+            } else if ([[url path] isEqualToString:@"/page2"]) {
+                //self.window.rootViewController = [[Page2ViewController alloc] init];
+            } else {
+                return NO;
+            }
+        } else {
+            return NO;
+        }
+        return YES;
+    }
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL*)url
+{
+    // 接受传过来的参数
+    NSString *text = [[url host] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"打开啦"
+                                                        message:text
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+    [alertView show];
+    return YES;
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

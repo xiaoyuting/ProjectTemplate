@@ -21,8 +21,8 @@
 
 //系统版本
 //判断是在iOS11之前
-#ifndef kiOS11Before
-#define kiOS11Before (kSystemVersion < 11)
+#ifndef kiOSBefore
+#define kiOSBefore (kSystemVersion < 10.3)
 #endif
 
 
