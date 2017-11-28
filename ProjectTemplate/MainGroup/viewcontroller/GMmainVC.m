@@ -9,45 +9,57 @@
 #import "GMmainVC.h"
 
 #import "UITapGestureRecognizer+Block.h"
-
-
 #import "WRNavigationBar.h"
-
 #import "SDCycleScrollView.h"
 #import "WRImageHelper.h"
+#import "GMHomeRequest.h"
 #import <UIView+SDAutoLayout.h>
+#import "UIImageView+WebCache.h"
+#import "UIButton+WebCache.h"
+
+
+#import "GMhomeBannerModel.h"
+#import "GMhomeRecommendModel.h"
+
 #define NAVBAR_COLORCHANGE_POINT (-IMAGE_HEIGHT + NAV_HEIGHT)
 #define NAV_HEIGHT 64
-#define IMAGE_HEIGHT 200
+#define IMAGE_HEIGHT 240
 #define SCROLL_DOWN_LIMIT 70
 
 #define LIMIT_OFFSET_Y -(IMAGE_HEIGHT + SCROLL_DOWN_LIMIT)
-@interface GMmainVC ()<UITableViewDelegate, UITableViewDataSource, SDCycleScrollViewDelegate>
+@interface GMmainVC ()<UITableViewDelegate, UITableViewDataSource,  SDCycleScrollViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) SDCycleScrollView *advView;
 @property (nonatomic, strong) SDCycleScrollView *adtView;
 @property (nonatomic, strong) UIButton *searchButton;
 @property (nonatomic, assign) CGFloat  oldOffset;
+@property (nonatomic, strong) NSMutableArray  * dataArr;
+
 @end
 
 @implementation GMmainVC
 
 - (void)viewDidLoad
 {
+    
+
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor blueColor];
     [self setupNavItems];
     self.tableView.contentInset = UIEdgeInsetsMake(IMAGE_HEIGHT - [self navBarBottom], 0, 0, 0);
-    [self.tableView addSubview:self.advView];
+    //[self.tableView addSubview:self.advView];
+    [self setScrollerView];
     [self.view addSubview:self.tableView];
     
     [self wr_setNavBarBarTintColor:[UIColor redColor]];
     [self wr_setNavBarBackgroundAlpha:0];
+        [self senderRequest];
 }
 
 - (void)setupNavItems
 {
-     [self setNavLeftItemTitle:nil andImage:[UIImage imageNamed:@"rightNav"]];
+    self.dataArr = [NSMutableArray array];      
+    [self setNavLeftItemTitle:nil andImage:[UIImage imageNamed:@"rightNav"]];
     [self setNavRightItemTitle:nil andImage:[UIImage imageNamed:@"rightNav"]];
     self.searchButton = [[UIButton alloc]initWithFrame:CGRectMake(0, -3, 230, 30)];
     [self.searchButton setTitle:@"搜索职位/公司/商区" forState:UIControlStateNormal];
@@ -132,15 +144,16 @@
 #pragma mark - tableview delegate / dataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 20;
+    return self.dataArr.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                                    reuseIdentifier:nil];
-    NSString *str = [NSString stringWithFormat:@"WRNavigationBar %zd",indexPath.row];
-    cell.textLabel.text = str;
+    GMhomeRecommendModel * model = self.dataArr[indexPath.row];
+    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:model.image] placeholderImage:nil];
+    cell.textLabel.text = model.title;
     return cell;
 }
 
@@ -192,42 +205,55 @@
     UIGraphicsEndImageContext();
     return newImage;
 }
+-(void)setScrollerView{
 
-- (SDCycleScrollView *)advView
-{
-    if (_advView == nil) {
-        NSArray *localImages = @[@"lagou0.jpeg", @"lagou1.jpeg", @"lagou2.jpeg", @"lagou3.jpeg"];
-        _advView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, -IMAGE_HEIGHT, kScreenWidth, IMAGE_HEIGHT) imageNamesGroup:localImages];
-        _advView.pageDotColor = [UIColor grayColor];
-        _advView.autoScrollTimeInterval = 2;
-        _advView.currentPageDotColor = [UIColor whiteColor];
-        _advView.bannerImageViewContentMode = UIViewContentModeScaleAspectFill;
-    }
-    return _advView;
-}
--(SDCycleScrollView *)adtView{
-    if(_adtView==nil){
-        _adtView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectZero delegate:self placeholderImage:nil];
- _adtView.scrollDirection = UICollectionViewScrollDirectionVertical;
- _adtView.onlyDisplayText = YES;
+   self.advView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, -IMAGE_HEIGHT, kScreenWidth, IMAGE_HEIGHT-40) delegate:self placeholderImage:[UIImage imageNamed:@"placeholder"]];
+    
+    self.advView.pageControlAliment = SDCycleScrollViewPageContolAlimentRight;
+    //cycleScrollView2.titlesGroup = titles;
+    self.advView.currentPageDotColor = [UIColor whiteColor]; // 自定义分页控件小圆标颜色
+    [self.tableView addSubview:self.advView];
+    _adtView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, -40, kScreenWidth, 40) delegate:self placeholderImage:nil];
+    _adtView.scrollDirection = UICollectionViewScrollDirectionVertical;
+    _adtView.onlyDisplayText = YES;
     
     NSMutableArray *titlesArray = [NSMutableArray new];
     [titlesArray addObject:@"纯文字上下滚动轮播"];
     [titlesArray addObject:@"纯文字上下滚动轮播 -- demo轮播图4"];
-   // [titlesArray addObjectsFromArray:titles];
-   _adtView.titlesGroup = [titlesArray copy];
+    // [titlesArray addObjectsFromArray:titles];
+    _adtView.titlesGroup = [titlesArray copy];
     [_adtView disableScrollGesture];
+    [self.tableView addSubview:self.adtView];
     
-   ;
-    }
-    return _adtView;
 }
-- (void)onClickLeft
-{
-    [self.navigationController popViewControllerAnimated:YES];
+
+
+
+
+- (void)senderRequest{
+    kWeakSelf(self);
+   
+    [GMHomeRequest GMHomeRequestSuccess:^(GMhomeModel *data) {
+    
+        NSMutableArray * bannerArr = [NSMutableArray array];
+        NSMutableArray * bannerTitle = [NSMutableArray array];
+        for (GMhomeBannerModel   * model in data.banner) {
+            [bannerArr  addObject:model.image];
+            [bannerTitle addObject:model.title];
+            
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [weakself.dataArr addObjectsFromArray:data.hot_recommend];
+            weakself.advView.titlesGroup  = [bannerTitle copy];
+            weakself.advView.imageURLStringsGroup = [bannerArr copy];
+            [weakself.tableView reloadData];
+        });
+     
+        
+    } failure:^(NSError *error) {
+        
+    }];
 }
-- (void)onClickRight
-{}
 - (void)onClickSearchBtn
 {}
 

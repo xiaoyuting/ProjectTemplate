@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "GMhomeModel.h"
 @interface GMHomeRequest : NSObject
-+(void)GMHomeRequestSuccess:(void(^)(id data))success
++(void)GMHomeRequestSuccess:(void(^)(GMhomeModel * data))success
                     failure:(void(^)(NSError *error))failure;
 
 @end

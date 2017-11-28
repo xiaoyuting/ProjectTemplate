@@ -9,10 +9,11 @@
 #import "GMHomeRequest.h"
 
 @implementation GMHomeRequest
-+(void)GMHomeRequestSuccess:(void (^)(id))success
-                    failure:(void (^)(NSError *))failure{
++(void)GMHomeRequestSuccess:(void (^)(GMhomeModel *))success
+                    failure:(void (^)(NSError *))failure
+{
     [RequestManager requestWithType:HttpRequestTypeGet
-                          urlString: @"hhttp://demo.gm88.com/gateway/index.php"
+                          urlString: @"http://demo.gm88.com/gateway/index.php"
                          parameters:@{
                                     
                                       @"action":@"index.home"
@@ -21,10 +22,9 @@
                        successBlock:^(id response) {
                            NSLog(@"response===%@",response);
                            if (response[@"status"]){
-                               NSMutableArray *tmpArr=[NSMutableArray array];
-                               NSDictionary *dic = response[@"data"];
-                               [tmpArr addObjectsFromArray:dic[@"results"]];
-                               success(tmpArr);
+                               
+                               GMhomeModel * model = [GMhomeModel modelWithJSON:response[@"data"]];
+                               success(model);
                            }
                            
                            

@@ -52,9 +52,9 @@
 -(void)addNavigationVC{
     
         
-     NSArray *titleArr       = @[@"资讯",@"青训",@"赛事",@"我的"];
-        NSArray *vcNameArr      = @[@"main",@"info",@"activity",@"me"];
-        NSArray *tabIconNameArr = @[@"i_infor",@"i_youth",@"i_match",@"i_me"];
+     NSArray *titleArr       = @[@"首页",@"活动",@"信息",@"礼包",@"我的"];
+        NSArray *vcNameArr      = @[@"main",@"activity",@"info",@"gift",@"me"];
+        NSArray *tabIconNameArr = @[@"i_infor",@"i_youth",@"i_match",@"gift",@"i_me"];
         NSMutableArray *vcArr = [NSMutableArray array];
         for (NSInteger i = 0; i < titleArr.count ; i++) {
             NSString *vcName = [NSString stringWithFormat: @"GM%@VC",vcNameArr[i]];

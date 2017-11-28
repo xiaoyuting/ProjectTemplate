@@ -332,6 +332,7 @@ NSString * const ID = @"SDCycleScrollViewCell";
         }
     }];
     self.imagePathsGroup = [temp copy];
+    
 }
 
 - (void)setLocalizationImageNamesGroup:(NSArray *)localizationImageNamesGroup
