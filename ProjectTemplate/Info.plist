@@ -104,6 +104,16 @@
 				<string>wx5939ba19b940fea1</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.sina</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>wb1478825912</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>

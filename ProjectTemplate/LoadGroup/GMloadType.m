@@ -78,11 +78,20 @@ static GMloadType * loadManger;
         
         WBAuthorizeRequest *request = [WBAuthorizeRequest request];
         request.redirectURI = kSinaRedirectURI;
-                //        request.scope = @"follow_app_official_microblog";
+        //request.scope = @"follow_app_official_microblog";
         
         [WeiboSDK sendRequest:request];
         
     }
+}
++(void)shearTypeSelct:(channelType)shearType resulet:(resultInfo)resultInfo{
+    
+    QQApiTextObject * text = [QQApiTextObject objectWithText:@"测试四岁死 is"];
+    SendMessageToQQReq *req = [SendMessageToQQReq reqWithContent:text];
+    //将内容分享到qq
+    QQApiSendResultCode sent = [QQApiInterface sendReq:req];
+    
+   
 }
 
 /**
@@ -372,4 +381,6 @@ static GMloadType * loadManger;
                              otherButtonTitles:nil];
     [alert show];
 }
+
+
 @end

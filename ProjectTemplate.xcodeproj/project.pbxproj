@@ -71,6 +71,7 @@
 		0ECAA8AC1FCD651D00EA3AA0 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ECAA8AB1FCD651D00EA3AA0 /* libz.tbd */; };
 		0ECAA8AE1FCD652C00EA3AA0 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ECAA8AD1FCD652B00EA3AA0 /* libstdc++.tbd */; };
 		0ECAA8BB1FCE690700EA3AA0 /* GMloadType.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECAA8BA1FCE690700EA3AA0 /* GMloadType.m */; };
+		0ECAA8C11FCEAC0800EA3AA0 /* GMshearType.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECAA8C01FCEAC0800EA3AA0 /* GMshearType.m */; };
 		0ECDC7DF1FCAF9D300FA4424 /* WRCustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECDC7DC1FCAF9D200FA4424 /* WRCustomNavigationBar.m */; };
 		0ECDC7E01FCAF9D300FA4424 /* WRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECDC7DE1FCAF9D200FA4424 /* WRNavigationBar.m */; };
 		EEBB49B88E9392129531F431 /* libPods-ProjectTemplate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A1FE9D5704539AB8B5446B /* libPods-ProjectTemplate.a */; };
@@ -212,6 +213,8 @@
 		0ECAA8AD1FCD652B00EA3AA0 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		0ECAA8B91FCE690700EA3AA0 /* GMloadType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMloadType.h; sourceTree = "<group>"; };
 		0ECAA8BA1FCE690700EA3AA0 /* GMloadType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMloadType.m; sourceTree = "<group>"; };
+		0ECAA8BF1FCEAC0800EA3AA0 /* GMshearType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMshearType.h; sourceTree = "<group>"; };
+		0ECAA8C01FCEAC0800EA3AA0 /* GMshearType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMshearType.m; sourceTree = "<group>"; };
 		0ECDC7DB1FCAF9D200FA4424 /* WRCustomNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRCustomNavigationBar.h; sourceTree = "<group>"; };
 		0ECDC7DC1FCAF9D200FA4424 /* WRCustomNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRCustomNavigationBar.m; sourceTree = "<group>"; };
 		0ECDC7DD1FCAF9D200FA4424 /* WRNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRNavigationBar.h; sourceTree = "<group>"; };
@@ -450,6 +453,7 @@
 				0E0410A61F7D0716003657F8 /* Define */,
 				0E04108C1F7CE85E003657F8 /* Utils */,
 				0E0ADCF61F7CD22A009232F8 /* Main.storyboard */,
+				0ECAA8BE1FCEABE800EA3AA0 /* ShearGroup */,
 				0ECAA8B81FCE68DF00EA3AA0 /* LoadGroup */,
 				0E0ADCF91F7CD22A009232F8 /* Assets.xcassets */,
 				0E0ADCFB1F7CD22A009232F8 /* LaunchScreen.storyboard */,
@@ -661,6 +665,15 @@
 				0ECAA8BA1FCE690700EA3AA0 /* GMloadType.m */,
 			);
 			path = LoadGroup;
+			sourceTree = "<group>";
+		};
+		0ECAA8BE1FCEABE800EA3AA0 /* ShearGroup */ = {
+			isa = PBXGroup;
+			children = (
+				0ECAA8BF1FCEAC0800EA3AA0 /* GMshearType.h */,
+				0ECAA8C01FCEAC0800EA3AA0 /* GMshearType.m */,
+			);
+			path = ShearGroup;
 			sourceTree = "<group>";
 		};
 		0ECDC7DA1FCAF9D200FA4424 /* WRNavigationBar */ = {
@@ -937,6 +950,7 @@
 				0E95DC261FCBA53600F5557D /* WRImageHelper.m in Sources */,
 				0E2B773A1FCD09A100524CD3 /* AppDelegate.m in Sources */,
 				0E95DC491FCBB57800F5557D /* SDCollectionViewCell.m in Sources */,
+				0ECAA8C11FCEAC0800EA3AA0 /* GMshearType.m in Sources */,
 				0E2B772E1FCD064600524CD3 /* GMmeVC.m in Sources */,
 				0E04107D1F7CD62B003657F8 /* baseModel.m in Sources */,
 				0E0ADCEF1F7CD22A009232F8 /* main.m in Sources */,

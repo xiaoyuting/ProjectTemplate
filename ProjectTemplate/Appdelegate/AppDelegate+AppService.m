@@ -94,7 +94,8 @@
         return [WXApi handleOpenURL:url delegate:[GMloadType   loadManager]];
     }else if ([options[UIApplicationOpenURLOptionsSourceApplicationKey] isEqualToString:@"com.tencent.mqq"]){
         
-        //        [WTThirdPartyLoginManager didReceiveTencentUrl:url];
+        
+        [QQApiInterface handleOpenURL:url delegate:[GMshearType shearManager]];
         return [TencentOAuth HandleOpenURL:url];
     }
     return YES;
@@ -119,33 +120,13 @@
         
     }else if ([sourceApplication isEqualToString:@"com.tencent.mqq"]){
         
-        //        [WTShareManager didReceiveTencentUrl:url];
+        [QQApiInterface handleOpenURL:url delegate:[GMshearType shearManager]];
         return [TencentOAuth HandleOpenURL:url];
     }
     
     return YES;
 }
 
-/**
- 处理来至QQ的请求
- */
-- (void)onReq:(QQBaseReq *)req{
-    NSLog(@" ----req %@",req);
-}
-
-/**
- 处理来至QQ的响应
- */
-- (void)onResp:(QQBaseResp *)resp{
-    NSLog(@" ----resp %@",resp);
-}
-
-/**
- 处理QQ在线状态的回调
- */
-- (void)isOnlineResponse:(NSDictionary *)response{
-    
-}  
 + (AppDelegate *)shareAppDelegate{
     return (AppDelegate *)[[UIApplication sharedApplication] delegate];
 }
@@ -200,6 +181,8 @@
     }
     return superVC;
 }
+
+
 
 
 @end

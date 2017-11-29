@@ -10,6 +10,7 @@
 
 #import "GMloadType.h"
 
+#import "GMshearType.h"
 @interface GMinfoVC ()
 
 @end
@@ -22,12 +23,16 @@
 }
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
-    [GMloadType loadTypeSelect:channelTypeQQ resulet:^(NSDictionary *result, NSError *error) {
-        if(result){
-            NSLog(@"result ===%@",result);
-        }else{
-            NSLog(@"error ===%@",error);
-        }
+//    [GMloadType loadTypeSelect:channelTypeQQ resulet:^(NSDictionary *result, NSError *error) {
+//        if(result){
+//            NSLog(@"result ===%@",result);
+//        }else{
+//            NSLog(@"error ===%@",error);
+//        }
+//    }];
+    
+    [GMshearType shearTypeSelct:channelTypeWB resulet:^(NSDictionary *result, NSError *error) {
+        
     }];
 }
 - (void)didReceiveMemoryWarning {

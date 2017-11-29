@@ -1,5 +1,5 @@
 //
-//  GMloadType.h
+//  GMshearType.h
 //  ProjectTemplate
 //
 //  Created by 雨停 on 2017/11/29.
@@ -13,25 +13,19 @@
 #import <TencentOpenAPI/QQApiInterfaceObject.h>
 #import <TencentOpenAPI/QQApiInterface.h>
 
-
 typedef void(^resultInfo)(NSDictionary *result,NSError *error);
 
-typedef  NS_ENUM(NSInteger,  channelType) {
-   channelTypeQQ = 0,
-   channelTypeWX ,
-   channelTypeWB
+typedef  NS_ENUM (NSInteger , shearTypeChannel){
+    shearTypeChannelQzone=0,
+    shearTypeChannelQq
 };
-
-typedef NS_ENUM(NSInteger , statusCode) {
-    statusCodeSuccess=0,
-    statusCodeCancel=-2
-};
-@interface GMloadType : NSObject<TencentSessionDelegate, TencentLoginDelegate,WBHttpRequestDelegate,WeiboSDKDelegate,WXApiDelegate>
-
-+(GMloadType*)loadManager;
+@interface GMshearType : NSObject<TencentSessionDelegate, TencentLoginDelegate,WBHttpRequestDelegate,WeiboSDKDelegate,WXApiDelegate,QQApiInterfaceDelegate>
++(GMshearType*)shearManager;
 /**
  * loadType 登录类型
  * loadinfo 反馈数据
  */
-+(void)loadTypeSelect: (channelType)loadType  resulet:(resultInfo)resultInfo;
+
++(void)shearTypeSelct: (channelType)shearType resulet:(resultInfo)resultInfo;
+
 @end
