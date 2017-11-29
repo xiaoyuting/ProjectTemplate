@@ -63,6 +63,14 @@
 		0ECAA8931FCD393700EA3AA0 /* GMhomeBlockModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECAA8921FCD393700EA3AA0 /* GMhomeBlockModel.m */; };
 		0ECAA8961FCD3D1E00EA3AA0 /* GMhomeRecommendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECAA8951FCD3D1E00EA3AA0 /* GMhomeRecommendModel.m */; };
 		0ECAA89A1FCD480700EA3AA0 /* GMgiftVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECAA8991FCD480700EA3AA0 /* GMgiftVC.m */; };
+		0ECAA89E1FCD54DB00EA3AA0 /* GMhomeCateCollectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECAA89D1FCD54DB00EA3AA0 /* GMhomeCateCollectCell.m */; };
+		0ECAA8A01FCD62AD00EA3AA0 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ECAA89F1FCD62AD00EA3AA0 /* TencentOpenAPI.framework */; };
+		0ECAA8A61FCD64D500EA3AA0 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ECAA8A51FCD64D400EA3AA0 /* libiconv.tbd */; };
+		0ECAA8A81FCD650600EA3AA0 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ECAA8A71FCD650600EA3AA0 /* libsqlite3.tbd */; };
+		0ECAA8AA1FCD651100EA3AA0 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ECAA8A91FCD651100EA3AA0 /* libsqlite3.0.tbd */; };
+		0ECAA8AC1FCD651D00EA3AA0 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ECAA8AB1FCD651D00EA3AA0 /* libz.tbd */; };
+		0ECAA8AE1FCD652C00EA3AA0 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ECAA8AD1FCD652B00EA3AA0 /* libstdc++.tbd */; };
+		0ECAA8BB1FCE690700EA3AA0 /* GMloadType.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECAA8BA1FCE690700EA3AA0 /* GMloadType.m */; };
 		0ECDC7DF1FCAF9D300FA4424 /* WRCustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECDC7DC1FCAF9D200FA4424 /* WRCustomNavigationBar.m */; };
 		0ECDC7E01FCAF9D300FA4424 /* WRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECDC7DE1FCAF9D200FA4424 /* WRNavigationBar.m */; };
 		EEBB49B88E9392129531F431 /* libPods-ProjectTemplate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A1FE9D5704539AB8B5446B /* libPods-ProjectTemplate.a */; };
@@ -190,6 +198,20 @@
 		0ECAA8951FCD3D1E00EA3AA0 /* GMhomeRecommendModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMhomeRecommendModel.m; sourceTree = "<group>"; };
 		0ECAA8981FCD480700EA3AA0 /* GMgiftVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMgiftVC.h; sourceTree = "<group>"; };
 		0ECAA8991FCD480700EA3AA0 /* GMgiftVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMgiftVC.m; sourceTree = "<group>"; };
+		0ECAA89C1FCD54DB00EA3AA0 /* GMhomeCateCollectCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMhomeCateCollectCell.h; sourceTree = "<group>"; };
+		0ECAA89D1FCD54DB00EA3AA0 /* GMhomeCateCollectCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMhomeCateCollectCell.m; sourceTree = "<group>"; };
+		0ECAA89F1FCD62AD00EA3AA0 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
+		0ECAA8A11FCD63FB00EA3AA0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		0ECAA8A21FCD64A800EA3AA0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		0ECAA8A31FCD64BB00EA3AA0 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		0ECAA8A41FCD64C300EA3AA0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0ECAA8A51FCD64D400EA3AA0 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		0ECAA8A71FCD650600EA3AA0 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		0ECAA8A91FCD651100EA3AA0 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		0ECAA8AB1FCD651D00EA3AA0 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		0ECAA8AD1FCD652B00EA3AA0 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		0ECAA8B91FCE690700EA3AA0 /* GMloadType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMloadType.h; sourceTree = "<group>"; };
+		0ECAA8BA1FCE690700EA3AA0 /* GMloadType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMloadType.m; sourceTree = "<group>"; };
 		0ECDC7DB1FCAF9D200FA4424 /* WRCustomNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRCustomNavigationBar.h; sourceTree = "<group>"; };
 		0ECDC7DC1FCAF9D200FA4424 /* WRCustomNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRCustomNavigationBar.m; sourceTree = "<group>"; };
 		0ECDC7DD1FCAF9D200FA4424 /* WRNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRNavigationBar.h; sourceTree = "<group>"; };
@@ -202,7 +224,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ECAA8A61FCD64D500EA3AA0 /* libiconv.tbd in Frameworks */,
+				0ECAA8AC1FCD651D00EA3AA0 /* libz.tbd in Frameworks */,
 				EEBB49B88E9392129531F431 /* libPods-ProjectTemplate.a in Frameworks */,
+				0ECAA8A81FCD650600EA3AA0 /* libsqlite3.tbd in Frameworks */,
+				0ECAA8AA1FCD651100EA3AA0 /* libsqlite3.0.tbd in Frameworks */,
+				0ECAA8AE1FCD652C00EA3AA0 /* libstdc++.tbd in Frameworks */,
+				0ECAA8A01FCD62AD00EA3AA0 /* TencentOpenAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +450,7 @@
 				0E0410A61F7D0716003657F8 /* Define */,
 				0E04108C1F7CE85E003657F8 /* Utils */,
 				0E0ADCF61F7CD22A009232F8 /* Main.storyboard */,
+				0ECAA8B81FCE68DF00EA3AA0 /* LoadGroup */,
 				0E0ADCF91F7CD22A009232F8 /* Assets.xcassets */,
 				0E0ADCFB1F7CD22A009232F8 /* LaunchScreen.storyboard */,
 				0E0ADCFE1F7CD22A009232F8 /* Info.plist */,
@@ -469,6 +498,7 @@
 		0E2B77151FCD046900524CD3 /* MainGroup */ = {
 			isa = PBXGroup;
 			children = (
+				0ECAA89B1FCD54A700EA3AA0 /* view */,
 				0E2B77321FCD076900524CD3 /* model */,
 				0E2B77311FCD075400524CD3 /* viewcontroller */,
 				0E2B77301FCD074F00524CD3 /* viewmodel */,
@@ -615,6 +645,24 @@
 			path = GiftGroup;
 			sourceTree = "<group>";
 		};
+		0ECAA89B1FCD54A700EA3AA0 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				0ECAA89C1FCD54DB00EA3AA0 /* GMhomeCateCollectCell.h */,
+				0ECAA89D1FCD54DB00EA3AA0 /* GMhomeCateCollectCell.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		0ECAA8B81FCE68DF00EA3AA0 /* LoadGroup */ = {
+			isa = PBXGroup;
+			children = (
+				0ECAA8B91FCE690700EA3AA0 /* GMloadType.h */,
+				0ECAA8BA1FCE690700EA3AA0 /* GMloadType.m */,
+			);
+			path = LoadGroup;
+			sourceTree = "<group>";
+		};
 		0ECDC7DA1FCAF9D200FA4424 /* WRNavigationBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -629,6 +677,16 @@
 		239F2425AE866A23533FD4F8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0ECAA8AD1FCD652B00EA3AA0 /* libstdc++.tbd */,
+				0ECAA8AB1FCD651D00EA3AA0 /* libz.tbd */,
+				0ECAA8A91FCD651100EA3AA0 /* libsqlite3.0.tbd */,
+				0ECAA8A71FCD650600EA3AA0 /* libsqlite3.tbd */,
+				0ECAA8A51FCD64D400EA3AA0 /* libiconv.tbd */,
+				0ECAA8A41FCD64C300EA3AA0 /* CoreGraphics.framework */,
+				0ECAA8A31FCD64BB00EA3AA0 /* CoreTelephony.framework */,
+				0ECAA8A21FCD64A800EA3AA0 /* Security.framework */,
+				0ECAA8A11FCD63FB00EA3AA0 /* SystemConfiguration.framework */,
+				0ECAA89F1FCD62AD00EA3AA0 /* TencentOpenAPI.framework */,
 				65A1FE9D5704539AB8B5446B /* libPods-ProjectTemplate.a */,
 			);
 			name = Frameworks;
@@ -866,6 +924,8 @@
 				0E0410E11F8B4A3D003657F8 /* viewModel.m in Sources */,
 				0E2B77351FCD07CF00524CD3 /* GMHomeRequest.m in Sources */,
 				0E04109F1F7CF0A4003657F8 /* MBProgressHUD+MB.m in Sources */,
+				0ECAA89E1FCD54DB00EA3AA0 /* GMhomeCateCollectCell.m in Sources */,
+				0ECAA8BB1FCE690700EA3AA0 /* GMloadType.m in Sources */,
 				0E0410A41F7D0653003657F8 /* RequestManager.m in Sources */,
 				0E0410E41F8B61D9003657F8 /* HomeTableViewCell.m in Sources */,
 				0E0410DE1F8B4994003657F8 /* model.m in Sources */,
@@ -1045,10 +1105,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 85AV7L542H;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = /Users/yuting/ProjectTemplate/ProjectTemplate/PrefixHeader.pch;
 				INFOPLIST_FILE = ProjectTemplate/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yutingxiao.ProjectTemplate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1061,10 +1125,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 85AV7L542H;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = /Users/yuting/ProjectTemplate/ProjectTemplate/PrefixHeader.pch;
 				INFOPLIST_FILE = ProjectTemplate/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yutingxiao.ProjectTemplate;
 				PRODUCT_NAME = "$(TARGET_NAME)";

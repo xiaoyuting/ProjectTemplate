@@ -8,6 +8,8 @@
 
 #import "GMinfoVC.h"
 
+#import "GMloadType.h"
+
 @interface GMinfoVC ()
 
 @end
@@ -15,23 +17,23 @@
 @implementation GMinfoVC
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
+  [super viewDidLoad];
 
+}
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+    [GMloadType loadTypeSelect:channelTypeQQ resulet:^(NSDictionary *result, NSError *error) {
+        if(result){
+            NSLog(@"result ===%@",result);
+        }else{
+            NSLog(@"error ===%@",error);
+        }
+    }];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

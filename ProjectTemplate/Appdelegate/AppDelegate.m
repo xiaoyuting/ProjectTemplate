@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "RootBaseBar.h"
+#import "AppDelegate+AppService.h"
 @interface AppDelegate ()
 
 @end
