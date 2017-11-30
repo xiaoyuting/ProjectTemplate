@@ -50,6 +50,19 @@
 		0E2B773A1FCD09A100524CD3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2B77371FCD09A000524CD3 /* AppDelegate.m */; };
 		0E2B773B1FCD09A100524CD3 /* AppDelegate+AppService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2B77391FCD09A100524CD3 /* AppDelegate+AppService.m */; };
 		0E4291151FCF976B007C77FF /* ShareContentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4291111FCF976A007C77FF /* ShareContentItem.m */; };
+		0E42911F1FCFF4BE007C77FF /* GMpopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E42911E1FCFF4BE007C77FF /* GMpopView.m */; };
+		0E42912C1FD010C2007C77FF /* wechat_moment@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E4291201FD010C0007C77FF /* wechat_moment@3x.png */; };
+		0E42912D1FD010C2007C77FF /* weibo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E4291211FD010C1007C77FF /* weibo@3x.png */; };
+		0E42912E1FD010C2007C77FF /* qq@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E4291221FD010C1007C77FF /* qq@3x.png */; };
+		0E42912F1FD010C2007C77FF /* weibo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E4291231FD010C1007C77FF /* weibo@2x.png */; };
+		0E4291301FD010C2007C77FF /* qzone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E4291241FD010C1007C77FF /* qzone@2x.png */; };
+		0E4291311FD010C2007C77FF /* qq@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E4291251FD010C2007C77FF /* qq@2x.png */; };
+		0E4291321FD010C2007C77FF /* wechat_fav@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E4291261FD010C2007C77FF /* wechat_fav@2x.png */; };
+		0E4291331FD010C2007C77FF /* wechat_moment@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E4291271FD010C2007C77FF /* wechat_moment@2x.png */; };
+		0E4291341FD010C3007C77FF /* qzone@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E4291281FD010C2007C77FF /* qzone@3x.png */; };
+		0E4291351FD010C3007C77FF /* wechat_fav@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E4291291FD010C2007C77FF /* wechat_fav@3x.png */; };
+		0E4291361FD010C3007C77FF /* wechat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E42912A1FD010C2007C77FF /* wechat@2x.png */; };
+		0E4291371FD010C3007C77FF /* wechat@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E42912B1FD010C2007C77FF /* wechat@3x.png */; };
 		0E95DC261FCBA53600F5557D /* WRImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E95DC251FCBA53600F5557D /* WRImageHelper.m */; };
 		0E95DC451FCBB57800F5557D /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E95DC381FCBB57800F5557D /* TAAbstractDotView.m */; };
 		0E95DC461FCBB57800F5557D /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E95DC3A1FCBB57800F5557D /* TAAnimatedDotView.m */; };
@@ -176,6 +189,20 @@
 		0E4291101FCF0862007C77FF /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		0E4291111FCF976A007C77FF /* ShareContentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareContentItem.m; sourceTree = "<group>"; };
 		0E4291121FCF976A007C77FF /* ShareContentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareContentItem.h; sourceTree = "<group>"; };
+		0E42911D1FCFF4BE007C77FF /* GMpopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMpopView.h; sourceTree = "<group>"; };
+		0E42911E1FCFF4BE007C77FF /* GMpopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMpopView.m; sourceTree = "<group>"; };
+		0E4291201FD010C0007C77FF /* wechat_moment@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wechat_moment@3x.png"; sourceTree = "<group>"; };
+		0E4291211FD010C1007C77FF /* weibo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weibo@3x.png"; sourceTree = "<group>"; };
+		0E4291221FD010C1007C77FF /* qq@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qq@3x.png"; sourceTree = "<group>"; };
+		0E4291231FD010C1007C77FF /* weibo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weibo@2x.png"; sourceTree = "<group>"; };
+		0E4291241FD010C1007C77FF /* qzone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qzone@2x.png"; sourceTree = "<group>"; };
+		0E4291251FD010C2007C77FF /* qq@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qq@2x.png"; sourceTree = "<group>"; };
+		0E4291261FD010C2007C77FF /* wechat_fav@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wechat_fav@2x.png"; sourceTree = "<group>"; };
+		0E4291271FD010C2007C77FF /* wechat_moment@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wechat_moment@2x.png"; sourceTree = "<group>"; };
+		0E4291281FD010C2007C77FF /* qzone@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qzone@3x.png"; sourceTree = "<group>"; };
+		0E4291291FD010C2007C77FF /* wechat_fav@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wechat_fav@3x.png"; sourceTree = "<group>"; };
+		0E42912A1FD010C2007C77FF /* wechat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wechat@2x.png"; sourceTree = "<group>"; };
+		0E42912B1FD010C2007C77FF /* wechat@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wechat@3x.png"; sourceTree = "<group>"; };
 		0E95DC241FCBA53600F5557D /* WRImageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRImageHelper.h; sourceTree = "<group>"; };
 		0E95DC251FCBA53600F5557D /* WRImageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRImageHelper.m; sourceTree = "<group>"; };
 		0E95DC371FCBB57800F5557D /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
@@ -454,10 +481,10 @@
 				0E0410D81F8B4905003657F8 /* view */,
 				0E0410A61F7D0716003657F8 /* Define */,
 				0E04108C1F7CE85E003657F8 /* Utils */,
-				0E0ADCF61F7CD22A009232F8 /* Main.storyboard */,
 				0ECAA8B81FCE68DF00EA3AA0 /* LoadShearGroup */,
 				0E0ADCF91F7CD22A009232F8 /* Assets.xcassets */,
 				0E0ADCFB1F7CD22A009232F8 /* LaunchScreen.storyboard */,
+				0E0ADCF61F7CD22A009232F8 /* Main.storyboard */,
 				0E0ADCFE1F7CD22A009232F8 /* Info.plist */,
 				0E0ADD201F7CD28F009232F8 /* PrefixHeader.pch */,
 				0E0ADCED1F7CD22A009232F8 /* Supporting Files */,
@@ -623,6 +650,18 @@
 		0ECAA8871FCD0B3F00EA3AA0 /* ImageGroup */ = {
 			isa = PBXGroup;
 			children = (
+				0E4291251FD010C2007C77FF /* qq@2x.png */,
+				0E4291221FD010C1007C77FF /* qq@3x.png */,
+				0E4291241FD010C1007C77FF /* qzone@2x.png */,
+				0E4291281FD010C2007C77FF /* qzone@3x.png */,
+				0E4291261FD010C2007C77FF /* wechat_fav@2x.png */,
+				0E4291291FD010C2007C77FF /* wechat_fav@3x.png */,
+				0E4291271FD010C2007C77FF /* wechat_moment@2x.png */,
+				0E4291201FD010C0007C77FF /* wechat_moment@3x.png */,
+				0E42912A1FD010C2007C77FF /* wechat@2x.png */,
+				0E42912B1FD010C2007C77FF /* wechat@3x.png */,
+				0E4291231FD010C1007C77FF /* weibo@2x.png */,
+				0E4291211FD010C1007C77FF /* weibo@3x.png */,
 				0E2B77261FCD064500524CD3 /* lagou0.jpeg */,
 				0E2B77221FCD064400524CD3 /* lagou1.jpeg */,
 				0E2B771C1FCD064300524CD3 /* lagou2.jpeg */,
@@ -662,6 +701,8 @@
 		0ECAA8B81FCE68DF00EA3AA0 /* LoadShearGroup */ = {
 			isa = PBXGroup;
 			children = (
+				0E42911D1FCFF4BE007C77FF /* GMpopView.h */,
+				0E42911E1FCFF4BE007C77FF /* GMpopView.m */,
 				0ECAA8B91FCE690700EA3AA0 /* GMloadType.h */,
 				0ECAA8BA1FCE690700EA3AA0 /* GMloadType.m */,
 				0E4291121FCF976A007C77FF /* ShareContentItem.h */,
@@ -826,20 +867,32 @@
 				0E2B77061FCBEE3E00524CD3 /* 小雨@2x.png in Resources */,
 				0E2B772D1FCD064600524CD3 /* lagou3.jpeg in Resources */,
 				0E2B770A1FCBEE3E00524CD3 /* 多云@3x.png in Resources */,
+				0E42912F1FD010C2007C77FF /* weibo@2x.png in Resources */,
 				0E0ADCFD1F7CD22A009232F8 /* LaunchScreen.storyboard in Resources */,
 				0E2B77051FCBEE3E00524CD3 /* 晴@2x.png in Resources */,
+				0E4291341FD010C3007C77FF /* qzone@3x.png in Resources */,
 				0E2B770D1FCBEE3E00524CD3 /* 大雨@3x.png in Resources */,
+				0E4291351FD010C3007C77FF /* wechat_fav@3x.png in Resources */,
 				0E0ADCFA1F7CD22A009232F8 /* Assets.xcassets in Resources */,
 				0E2B77081FCBEE3E00524CD3 /* 多云@2x.png in Resources */,
+				0E4291321FD010C2007C77FF /* wechat_fav@2x.png in Resources */,
+				0E4291311FD010C2007C77FF /* qq@2x.png in Resources */,
+				0E4291331FD010C2007C77FF /* wechat_moment@2x.png in Resources */,
+				0E42912C1FD010C2007C77FF /* wechat_moment@3x.png in Resources */,
 				0E2B772F1FCD064600524CD3 /* lagou0.jpeg in Resources */,
 				0ECAA8901FCD2D6D00EA3AA0 /* search@3x.png in Resources */,
 				0E2B772C1FCD064600524CD3 /* lagou1.jpeg in Resources */,
 				0E2B77271FCD064600524CD3 /* rightNav.png in Resources */,
 				0E2B77281FCD064600524CD3 /* lagou2.jpeg in Resources */,
 				0E0ADCF81F7CD22A009232F8 /* Main.storyboard in Resources */,
+				0E42912D1FD010C2007C77FF /* weibo@3x.png in Resources */,
+				0E42912E1FD010C2007C77FF /* qq@3x.png in Resources */,
+				0E4291361FD010C3007C77FF /* wechat@2x.png in Resources */,
 				0E2B77091FCBEE3E00524CD3 /* 小雨@3x.png in Resources */,
 				0E2B770C1FCBEE3E00524CD3 /* 雪@2x.png in Resources */,
 				0E2B770B1FCBEE3E00524CD3 /* 大雨@2x.png in Resources */,
+				0E4291371FD010C3007C77FF /* wechat@3x.png in Resources */,
+				0E4291301FD010C2007C77FF /* qzone@2x.png in Resources */,
 				0E2B77071FCBEE3E00524CD3 /* 晴@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -943,6 +996,7 @@
 				0E2B77291FCD064600524CD3 /* GMinfoVC.m in Sources */,
 				0E0410901F7CE8A4003657F8 /* OpenUDID.m in Sources */,
 				0ECDC7E01FCAF9D300FA4424 /* WRNavigationBar.m in Sources */,
+				0E42911F1FCFF4BE007C77FF /* GMpopView.m in Sources */,
 				0ECAA88B1FCD0DAE00EA3AA0 /* GMhomeModel.m in Sources */,
 				0E95DC261FCBA53600F5557D /* WRImageHelper.m in Sources */,
 				0E2B773A1FCD09A100524CD3 /* AppDelegate.m in Sources */,

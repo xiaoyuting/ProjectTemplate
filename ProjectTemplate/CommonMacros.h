@@ -1,9 +1,9 @@
 //
 //  CommonMacros.h
-//  MiAiApp
+//  ProjectTemplate
 //
-//  Created by 徐阳 on 2017/5/31.
-//  Copyright © 2017年 徐阳. All rights reserved.
+//  Created by xy on 2017/11/26.
+//  Copyright © 2017年 yuting. All rights reserved.
 //
 
 //全局标记字符串，用于 通知 存储

@@ -10,6 +10,9 @@
 
 #import "GMloadType.h"
 #import "ShareContentItem.h"
+
+#import "GMpopView.h"
+
 @interface GMinfoVC ()
 
 @end
@@ -17,7 +20,7 @@
 @implementation GMinfoVC
 
 - (void)viewDidLoad {
-    
+    [[GMpopView popView] popShearComtentItem:nil];
     for(int i =0 ;i<10;i++){
         UIButton * btn  = [[UIButton alloc]initWithFrame:CGRectMake(0,64+50*i, KScreenWidth, 60)];
         [btn setTitle:[NSString stringWithFormat:@"==%d==",i] forState:UIControlStateNormal ];
@@ -83,22 +86,9 @@
                     }
                 }];
     }}
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    
-//    [GMloadType loadTypeSelect:channelTypeWX resulet:^(NSDictionary *result, NSError *error) {
-//        if(result){
-//            NSLog(@"result ===%@",result);
-//        }else{
-//            NSLog(@"error ===%@",error);
-//        }
-//    }];
-    
-    
-}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    
-    
 }
 
 @end
