@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "GMloadType.h"
-#import "GMshearType.h"
+
 
 #define ReplaceRootViewController(vc) [[AppDelegate shareAppDelegate] replaceRootViewController:vc]
 @interface AppDelegate (AppService)

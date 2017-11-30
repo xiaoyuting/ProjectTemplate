@@ -49,6 +49,7 @@
 		0E2B77351FCD07CF00524CD3 /* GMHomeRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2B77341FCD07CF00524CD3 /* GMHomeRequest.m */; };
 		0E2B773A1FCD09A100524CD3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2B77371FCD09A000524CD3 /* AppDelegate.m */; };
 		0E2B773B1FCD09A100524CD3 /* AppDelegate+AppService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2B77391FCD09A100524CD3 /* AppDelegate+AppService.m */; };
+		0E4291151FCF976B007C77FF /* ShareContentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4291111FCF976A007C77FF /* ShareContentItem.m */; };
 		0E95DC261FCBA53600F5557D /* WRImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E95DC251FCBA53600F5557D /* WRImageHelper.m */; };
 		0E95DC451FCBB57800F5557D /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E95DC381FCBB57800F5557D /* TAAbstractDotView.m */; };
 		0E95DC461FCBB57800F5557D /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E95DC3A1FCBB57800F5557D /* TAAnimatedDotView.m */; };
@@ -71,7 +72,6 @@
 		0ECAA8AC1FCD651D00EA3AA0 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ECAA8AB1FCD651D00EA3AA0 /* libz.tbd */; };
 		0ECAA8AE1FCD652C00EA3AA0 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ECAA8AD1FCD652B00EA3AA0 /* libstdc++.tbd */; };
 		0ECAA8BB1FCE690700EA3AA0 /* GMloadType.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECAA8BA1FCE690700EA3AA0 /* GMloadType.m */; };
-		0ECAA8C11FCEAC0800EA3AA0 /* GMshearType.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECAA8C01FCEAC0800EA3AA0 /* GMshearType.m */; };
 		0ECDC7DF1FCAF9D300FA4424 /* WRCustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECDC7DC1FCAF9D200FA4424 /* WRCustomNavigationBar.m */; };
 		0ECDC7E01FCAF9D300FA4424 /* WRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECDC7DE1FCAF9D200FA4424 /* WRNavigationBar.m */; };
 		EEBB49B88E9392129531F431 /* libPods-ProjectTemplate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A1FE9D5704539AB8B5446B /* libPods-ProjectTemplate.a */; };
@@ -172,6 +172,10 @@
 		0E2B77371FCD09A000524CD3 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0E2B77381FCD09A100524CD3 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0E2B77391FCD09A100524CD3 /* AppDelegate+AppService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+AppService.m"; sourceTree = "<group>"; };
+		0E42910F1FCF084F007C77FF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0E4291101FCF0862007C77FF /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		0E4291111FCF976A007C77FF /* ShareContentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareContentItem.m; sourceTree = "<group>"; };
+		0E4291121FCF976A007C77FF /* ShareContentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareContentItem.h; sourceTree = "<group>"; };
 		0E95DC241FCBA53600F5557D /* WRImageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRImageHelper.h; sourceTree = "<group>"; };
 		0E95DC251FCBA53600F5557D /* WRImageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRImageHelper.m; sourceTree = "<group>"; };
 		0E95DC371FCBB57800F5557D /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
@@ -213,8 +217,6 @@
 		0ECAA8AD1FCD652B00EA3AA0 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		0ECAA8B91FCE690700EA3AA0 /* GMloadType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMloadType.h; sourceTree = "<group>"; };
 		0ECAA8BA1FCE690700EA3AA0 /* GMloadType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMloadType.m; sourceTree = "<group>"; };
-		0ECAA8BF1FCEAC0800EA3AA0 /* GMshearType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMshearType.h; sourceTree = "<group>"; };
-		0ECAA8C01FCEAC0800EA3AA0 /* GMshearType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMshearType.m; sourceTree = "<group>"; };
 		0ECDC7DB1FCAF9D200FA4424 /* WRCustomNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRCustomNavigationBar.h; sourceTree = "<group>"; };
 		0ECDC7DC1FCAF9D200FA4424 /* WRCustomNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRCustomNavigationBar.m; sourceTree = "<group>"; };
 		0ECDC7DD1FCAF9D200FA4424 /* WRNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRNavigationBar.h; sourceTree = "<group>"; };
@@ -453,8 +455,7 @@
 				0E0410A61F7D0716003657F8 /* Define */,
 				0E04108C1F7CE85E003657F8 /* Utils */,
 				0E0ADCF61F7CD22A009232F8 /* Main.storyboard */,
-				0ECAA8BE1FCEABE800EA3AA0 /* ShearGroup */,
-				0ECAA8B81FCE68DF00EA3AA0 /* LoadGroup */,
+				0ECAA8B81FCE68DF00EA3AA0 /* LoadShearGroup */,
 				0E0ADCF91F7CD22A009232F8 /* Assets.xcassets */,
 				0E0ADCFB1F7CD22A009232F8 /* LaunchScreen.storyboard */,
 				0E0ADCFE1F7CD22A009232F8 /* Info.plist */,
@@ -658,22 +659,15 @@
 			path = view;
 			sourceTree = "<group>";
 		};
-		0ECAA8B81FCE68DF00EA3AA0 /* LoadGroup */ = {
+		0ECAA8B81FCE68DF00EA3AA0 /* LoadShearGroup */ = {
 			isa = PBXGroup;
 			children = (
 				0ECAA8B91FCE690700EA3AA0 /* GMloadType.h */,
 				0ECAA8BA1FCE690700EA3AA0 /* GMloadType.m */,
+				0E4291121FCF976A007C77FF /* ShareContentItem.h */,
+				0E4291111FCF976A007C77FF /* ShareContentItem.m */,
 			);
-			path = LoadGroup;
-			sourceTree = "<group>";
-		};
-		0ECAA8BE1FCEABE800EA3AA0 /* ShearGroup */ = {
-			isa = PBXGroup;
-			children = (
-				0ECAA8BF1FCEAC0800EA3AA0 /* GMshearType.h */,
-				0ECAA8C01FCEAC0800EA3AA0 /* GMshearType.m */,
-			);
-			path = ShearGroup;
+			path = LoadShearGroup;
 			sourceTree = "<group>";
 		};
 		0ECDC7DA1FCAF9D200FA4424 /* WRNavigationBar */ = {
@@ -690,6 +684,8 @@
 		239F2425AE866A23533FD4F8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0E4291101FCF0862007C77FF /* CoreText.framework */,
+				0E42910F1FCF084F007C77FF /* QuartzCore.framework */,
 				0ECAA8AD1FCD652B00EA3AA0 /* libstdc++.tbd */,
 				0ECAA8AB1FCD651D00EA3AA0 /* libz.tbd */,
 				0ECAA8A91FCD651100EA3AA0 /* libsqlite3.0.tbd */,
@@ -923,6 +919,7 @@
 				0E95DC451FCBB57800F5557D /* TAAbstractDotView.m in Sources */,
 				0E2B772B1FCD064600524CD3 /* GMmainVC.m in Sources */,
 				0E2B77121FCBF36000524CD3 /* UIViewController+Present.m in Sources */,
+				0E4291151FCF976B007C77FF /* ShareContentItem.m in Sources */,
 				0E0ADCF51F7CD22A009232F8 /* ViewController.m in Sources */,
 				0E04108B1F7CDFAF003657F8 /* RootBaseBar.m in Sources */,
 				0E2B772A1FCD064600524CD3 /* GMactivityVC.m in Sources */,
@@ -950,7 +947,6 @@
 				0E95DC261FCBA53600F5557D /* WRImageHelper.m in Sources */,
 				0E2B773A1FCD09A100524CD3 /* AppDelegate.m in Sources */,
 				0E95DC491FCBB57800F5557D /* SDCollectionViewCell.m in Sources */,
-				0ECAA8C11FCEAC0800EA3AA0 /* GMshearType.m in Sources */,
 				0E2B772E1FCD064600524CD3 /* GMmeVC.m in Sources */,
 				0E04107D1F7CD62B003657F8 /* baseModel.m in Sources */,
 				0E0ADCEF1F7CD22A009232F8 /* main.m in Sources */,
@@ -1128,6 +1124,59 @@
 				INFOPLIST_FILE = ProjectTemplate/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"FMDB\"",
+					"-l\"IQKeyboardManager\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"MJRefresh\"",
+					"-l\"SDAutoLayout\"",
+					"-l\"SDWebImage\"",
+					"-l\"WeChatSDK\"",
+					"-l\"WeiboSDK\"",
+					"-l\"YTKKeyValueStore\"",
+					"-l\"YYKit\"",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"sqlite3.0\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"AssetsLibrary\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreImage\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Photos\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"WebP\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yutingxiao.ProjectTemplate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1148,6 +1197,59 @@
 				INFOPLIST_FILE = ProjectTemplate/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"FMDB\"",
+					"-l\"IQKeyboardManager\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"MJRefresh\"",
+					"-l\"SDAutoLayout\"",
+					"-l\"SDWebImage\"",
+					"-l\"WeChatSDK\"",
+					"-l\"WeiboSDK\"",
+					"-l\"YTKKeyValueStore\"",
+					"-l\"YYKit\"",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"sqlite3.0\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"AssetsLibrary\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreImage\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Photos\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"WebP\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yutingxiao.ProjectTemplate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

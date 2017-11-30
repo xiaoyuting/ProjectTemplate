@@ -83,19 +83,18 @@
 // iOS9 以上用这个方法接收
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options
 {
-    NSDictionary * dic = options;
-    NSLog(@"%@", dic);
+ 
     if ([options[UIApplicationOpenURLOptionsSourceApplicationKey] isEqualToString:@"com.sina.weibo"]) {
-        NSLog(@"新浪微博~");
         
+
         return [WeiboSDK handleOpenURL:url delegate:[GMloadType loadManager]];
     }else if ([options[UIApplicationOpenURLOptionsSourceApplicationKey] isEqualToString:@"com.tencent.xin"]){
-        
+
         return [WXApi handleOpenURL:url delegate:[GMloadType   loadManager]];
     }else if ([options[UIApplicationOpenURLOptionsSourceApplicationKey] isEqualToString:@"com.tencent.mqq"]){
         
+          [QQApiInterface handleOpenURL:url delegate:[GMloadType loadManager]];
         
-        [QQApiInterface handleOpenURL:url delegate:[GMshearType shearManager]];
         return [TencentOAuth HandleOpenURL:url];
     }
     return YES;
@@ -107,20 +106,19 @@
 
     //6.3的新的API调用，是为了兼容国外平台(例如:新版facebookSDK,VK等)的调用[如果用6.2的api调用会没有回调],对国内平台没有影响
     
-    NSLog(@"%@",annotation);
-    NSLog(@"%@",url);
+   
     
     if ([sourceApplication isEqualToString:@"com.sina.weibo"]) {
         
         return [WeiboSDK handleOpenURL:url delegate:[GMloadType loadManager]];
         
     }else if ([sourceApplication isEqualToString:@"com.tencent.xin"]){
-        
+      
         return [WXApi handleOpenURL:url delegate:[GMloadType loadManager]];
         
     }else if ([sourceApplication isEqualToString:@"com.tencent.mqq"]){
         
-        [QQApiInterface handleOpenURL:url delegate:[GMshearType shearManager]];
+        [QQApiInterface handleOpenURL:url delegate:[GMloadType loadManager]];
         return [TencentOAuth HandleOpenURL:url];
     }
     

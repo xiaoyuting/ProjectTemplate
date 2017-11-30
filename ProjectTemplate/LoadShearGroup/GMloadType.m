@@ -7,12 +7,13 @@
 //
 
 #import "GMloadType.h"
-
+#import "ShareContentItem.h"
 static GMloadType * loadManger;
 @interface GMloadType()<NSURLSessionTaskDelegate>
 @property (nonatomic,strong)TencentOAuth *tencentOAuth;
 @property (nonatomic,strong)NSMutableArray * permissionArray;
 @property (nonatomic,copy)  resultInfo  resultBlock;
+@property (nonatomic, copy) ShareResultlBlock shareResultlBlock;
 @property (nonatomic,assign)channelType LoginType;
 @property (nonatomic, strong)NSString * access_token;
 @end
@@ -83,15 +84,6 @@ static GMloadType * loadManger;
         [WeiboSDK sendRequest:request];
         
     }
-}
-+(void)shearTypeSelct:(channelType)shearType resulet:(resultInfo)resultInfo{
-    
-    QQApiTextObject * text = [QQApiTextObject objectWithText:@"测试四岁死 is"];
-    SendMessageToQQReq *req = [SendMessageToQQReq reqWithContent:text];
-    //将内容分享到qq
-    QQApiSendResultCode sent = [QQApiInterface sendReq:req];
-    
-   
 }
 
 /**
@@ -234,6 +226,10 @@ static GMloadType * loadManger;
     }
     else
     {
+        if (self.resultBlock)
+        {
+            self.resultBlock(nil, @"登录失败!");
+        }
         NSLog(@"登录失败!");
     }
 }
@@ -242,27 +238,62 @@ static GMloadType * loadManger;
 
 #pragma mark - WXApiDelegate
 
--(void) onResp:(BaseResp*)resp
-{
-    SendAuthResp *aresp = (SendAuthResp *)resp;
-    
-    if (resp.errCode ==statusCodeSuccess) {
-        NSString *code = aresp.code;
-        [self   getWeiXinUserInfoWithCode:code];
-    }else if(resp.errCode==statusCodeCancel){
-        if (self.resultBlock)
-        {
-            self.resultBlock(nil, @"您取消了");
-        }
-    } else{
+
+
+-(void)onResp:(id)resp{
+    //Wechat分享返回
+    NSLog(@" ----resp %@",resp);
+    if ([resp isKindOfClass:[SendMessageToWXResp class]]) {
+        SendMessageToWXResp * tmpResp = (SendMessageToWXResp *)resp;
+        if (tmpResp.errCode == WXSuccess) {
+       NSLog(@"分享至微信成功!");
+            if(self.shareResultlBlock){
+                self.shareResultlBlock(@"分享成功!");
+            }
         
-        if (self.resultBlock)
-        {
-            self.resultBlock(nil, @"授权失败");
+        }else{
+            if(self.shareResultlBlock){
+                self.shareResultlBlock(@"分享失败!");
+            }
+        NSLog(@"分享至微信失败!");
+        }
+    }
+    //QQ分享返回
+    if ([resp isKindOfClass:[SendMessageToQQResp class]]) {
+        SendMessageToQQResp * tmpResp = (SendMessageToQQResp *)resp;
+        if (tmpResp.type == ESENDMESSAGETOQQRESPTYPE && [tmpResp.result integerValue] == 0) {
+           NSLog(@"success ");
+           
+            if(self.shareResultlBlock){
+                self.shareResultlBlock(@"分享成功!");
+            }
+            
+        }else{
+            if(self.shareResultlBlock){
+                self.shareResultlBlock(@"分享失败!");
+            }
         }
     }
     
-    
+    if([resp isKindOfClass:[SendAuthResp class]]){
+        SendAuthResp *aresp = (SendAuthResp *)resp;
+        
+        if (aresp.errCode ==statusCodeSuccess) {
+            NSString *code = aresp.code;
+            [self   getWeiXinUserInfoWithCode:code];
+        }else if(aresp.errCode==statusCodeCancel){
+            if (self.resultBlock)
+            {
+                self.resultBlock(nil, @"您取消了");
+            }
+        } else{
+            
+            if (self.resultBlock)
+            {
+                self.resultBlock(nil, @"授权失败");
+            }
+        }
+    }
 }
 
 
@@ -313,15 +344,39 @@ static GMloadType * loadManger;
 }
 
 - (void)didReceiveWeiboResponse:(WBBaseResponse *)response
+
+
 {
-    NSLog(@"token %@", [(WBAuthorizeResponse *) response accessToken]);
-    NSLog(@"uid %@", [(WBAuthorizeResponse *) response userID]);
-    if(response.statusCode==    WeiboSDKResponseStatusCodeSuccess ){
-        [self getWeiBoUserInfo:[(WBAuthorizeResponse *) response userID] token:[(WBAuthorizeResponse *) response accessToken]];
-        
-    }else{
-        self.resultBlock(nil, @"失败了");
+    
+    if ([response isKindOfClass:WBSendMessageToWeiboResponse.class])
+    {
+        if (response.statusCode == 0) {
+            if(self.shareResultlBlock){
+                self.shareResultlBlock(@"分享成功!");
+            }
+            
+        }
+        else {
+            if(self.shareResultlBlock){
+                self.shareResultlBlock(@"分享失败!");
+            }
+            
+        }
     }
+    else if ([response isKindOfClass:WBAuthorizeResponse.class]){
+        if (response.statusCode == 0) {
+            
+             [self getWeiBoUserInfo:[(WBAuthorizeResponse *) response userID] token:[(WBAuthorizeResponse *) response accessToken]];
+            NSLog( @"新浪微博授权成功");
+                return;
+        }
+        else {
+            self.resultBlock(nil, @"失败了");
+                return;
+        }
+    }
+    
+    
 }
 
 - (void)getWeiBoUserInfo:(NSString *)uid token:(NSString *)token
@@ -380,6 +435,152 @@ static GMloadType * loadManger;
                              cancelButtonTitle:NSLocalizedString(@"确定", nil)
                              otherButtonTitles:nil];
     [alert show];
+}
+
+#pragma mark - 分享方法------
++ (void)shareWithContent:(ShareContentItem *)contentObj shareType:(ShareType)shareType shareResult:(ShareResultlBlock)shareResult
+{
+   
+   loadManger.shareResultlBlock = shareResult;
+    
+    [self shareWithContent:contentObj shareType:shareType];
+}
++ (void)shareWithContent:(ShareContentItem *)contentObj shareType:(ShareType)shareType
+{
+
+    
+    switch (shareType) {
+        case ShareTypeWeiBo:
+        {
+            WBMessageObject *message = [WBMessageObject message];
+            message.text = contentObj.sinaSummary;
+            
+            if(contentObj.bigImage){
+                WBImageObject *webpage = [WBImageObject object];
+                webpage.imageData =  UIImageJPEGRepresentation(contentObj.bigImage, 1.0f);
+                
+                message.imageObject = webpage;
+            }
+            
+            WBSendMessageToWeiboRequest *request = [WBSendMessageToWeiboRequest requestWithMessage:message];
+            
+            [WeiboSDK sendRequest:request];
+            break;
+        }
+        case ShareTypeQQ:
+        {
+            NSString * shareTitle = [NSString string];
+            shareTitle = contentObj.qqTitle ? contentObj.qqTitle : contentObj.title;
+            
+            //分享跳转URL
+            NSString *urlt = contentObj.urlString;
+            QQApiNewsObject * newsObj ;
+            
+            if (contentObj.urlImageString) {
+                newsObj   = [QQApiNewsObject objectWithURL:[NSURL URLWithString:urlt] title:shareTitle description:contentObj.summary previewImageURL:[NSURL URLWithString:contentObj.urlImageString]];
+            }else if(contentObj.thumbImage){
+                // 如果分享的是图片的话 不能太大所以如果后台过来的的图片太大的话 可以调节如下的倍数
+                NSData *imageData = UIImageJPEGRepresentation(contentObj.thumbImage, 1.0);
+                newsObj = [QQApiNewsObject objectWithURL:[NSURL URLWithString:urlt] title:shareTitle description:contentObj.summary previewImageData:imageData];
+            }
+            
+            SendMessageToQQReq *req = [[SendMessageToQQReq alloc]init];
+            req.message = newsObj;
+            req.type = ESENDMESSAGETOQQREQTYPE;
+            //将内容分享到qq
+            [QQApiInterface sendReq:req];
+            
+            
+            break;
+            
+        }
+        case ShareTypeQQZone:
+        {
+//            QQApiTextObject * text = [QQApiTextObject objectWithText:@"测试四岁死 is"];
+//            SendMessageToQQReq *req = [SendMessageToQQReq reqWithContent:text];
+//            //将内容分享到qq
+//            QQApiSendResultCode sent = [QQApiInterface SendReqToQZone:req];
+            //分享跳转URL
+            NSString *urlt = contentObj.urlString;
+            NSLog(@"%@",contentObj.thumbImage);
+            QQApiNewsObject * newsObj ;
+            if (contentObj.urlImageString) {
+                newsObj   = [QQApiNewsObject objectWithURL:[NSURL URLWithString:urlt] title:contentObj.title description:contentObj.summary previewImageURL:[NSURL URLWithString:contentObj.urlImageString]];
+            }else if(contentObj.thumbImage){
+                
+                NSData * imageData = UIImagePNGRepresentation(contentObj.thumbImage);
+                
+                newsObj = [QQApiNewsObject objectWithURL:[NSURL URLWithString:urlt] title:contentObj.title description:contentObj.summary previewImageData:imageData];
+            }
+            
+            SendMessageToQQReq *req = [[SendMessageToQQReq alloc]init];
+            req.message = newsObj;
+            req.type = ESENDMESSAGETOQQREQTYPE;
+            
+            [QQApiInterface SendReqToQZone:req];
+            break;
+            
+            break;
+        }
+        case ShareTypeWeiXinTimeline: // 微信朋友圈
+        {
+            WXMediaMessage * message = [WXMediaMessage message];
+            message.title = contentObj.weixinPyqtitle.length >0 ? contentObj.weixinPyqtitle : contentObj.title;
+            [message setThumbImage:contentObj.thumbImage];
+            message.description = contentObj.summary;
+            WXWebpageObject * ext = [WXWebpageObject object];
+            ext.webpageUrl = contentObj.urlString;
+            message.mediaObject = ext;
+            SendMessageToWXReq * req = [[SendMessageToWXReq alloc]init];
+            req.bText = NO;
+            req.message = message;
+            req.scene = WXSceneTimeline;
+            [WXApi sendReq:req];
+            
+            
+            break;
+        }
+        case ShareTypeWeiXinSession:
+        {
+            WXMediaMessage * message = [WXMediaMessage message];
+            message.title = contentObj.title;
+            
+            [message setThumbImage:contentObj.thumbImage];
+            message.description = contentObj.summary;
+            WXWebpageObject * ext = [WXWebpageObject object];
+            ext.webpageUrl = contentObj.urlString;
+            message.mediaObject = ext;
+            
+            SendMessageToWXReq *req = [[SendMessageToWXReq alloc]init];
+            req.bText = NO;
+            req.message = message;
+            req.scene = WXSceneSession;
+            [WXApi sendReq:req];
+            
+            break;
+        }
+        case ShareTypeWeiXinFavorite:
+        {
+            WXMediaMessage * message = [WXMediaMessage message];
+            message.title = contentObj.title;
+            
+            [message setThumbImage:contentObj.thumbImage];
+            message.description = contentObj.summary;
+            WXWebpageObject * ext = [WXWebpageObject object];
+            ext.webpageUrl = contentObj.urlString;
+            message.mediaObject = ext;
+            
+            SendMessageToWXReq *req = [[SendMessageToWXReq alloc]init];
+            req.bText = NO;
+            req.message = message;
+            req.scene = WXSceneFavorite;
+            [WXApi sendReq:req];
+            break;
+        }
+            
+        default:
+            break;
+    }
 }
 
 
