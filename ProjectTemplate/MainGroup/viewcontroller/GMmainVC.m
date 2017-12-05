@@ -12,24 +12,33 @@
 #import "WRNavigationBar.h"
 #import "SDCycleScrollView.h"
 #import "GMHomeRequest.h"
-#import <UIView+SDAutoLayout.h>
+
 
 
 
 #import "GMhomeBannerModel.h"
 #import "GMhomeRecommendModel.h"
+#import "GMhomeBlockModel.h"
+#import "today_recommendModel.h"
+#import "gameModel.h"
+#import "new_gameModel.h"
+
 
 #import "GMhomeCateCollectCell.h"
-
+#import "GMhomeExampleCell.h"
+#import "GMhomeGameCell.h"
+#import "GMhomeNewGameCell.h"
 @interface GMmainVC ()<UITableViewDelegate, UITableViewDataSource,  SDCycleScrollViewDelegate,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 @property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) SDCycleScrollView *advView;
-@property (nonatomic, strong) SDCycleScrollView *adtView;
+@property (nonatomic, strong) SDCycleScrollView * advView;
+@property (nonatomic, strong) SDCycleScrollView * adTacticView;
+@property (nonatomic, strong) SDCycleScrollView * adNewsView;
 @property (nonatomic, strong) UIButton *searchButton;
 @property (nonatomic, assign) CGFloat  oldOffset;
 @property (nonatomic, strong) NSMutableArray  * dataArr;
 @property (nonatomic,strong)  UICollectionView * cateCollectView;
 @property (nonatomic,strong)  NSMutableArray   * cateArr;
+
 
 @end
 
@@ -80,10 +89,13 @@
     
 }
 - (void)setTabView{
-    self.tableView = [[UITableView alloc]init];
+    self.tableView = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStyleGrouped];
+
     [self.view addSubview:self.tableView];
     self.tableView.delegate =self;
     self.tableView.dataSource = self;
+    [self.tableView registerClass:[GMhomeGameCell class] forCellReuseIdentifier:NSStringFromClass([GMhomeGameCell class])];
+    [self.tableView registerClass:[GMhomeNewGameCell class] forCellReuseIdentifier:NSStringFromClass([GMhomeNewGameCell class])];
     self.tableView.sd_layout.spaceToSuperView(UIEdgeInsetsMake(0, 0, 0, 0));
 }
 
@@ -109,21 +121,40 @@
     self.cateCollectView.showsHorizontalScrollIndicator=NO;
     [self.cateCollectView registerClass:[GMhomeCateCollectCell class] forCellWithReuseIdentifier:NSStringFromClass([GMhomeCateCollectCell class])];
     [header addSubview:self.cateCollectView];
-    
     self.cateCollectView.backgroundColor = KWhiteColor;
     
-    self.advView.currentPageDotColor = [UIColor whiteColor]; // 自定义分页控件小圆标颜色
-    _adtView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectZero delegate:  self placeholderImage:nil];
-    [header addSubview:self.adtView];
-    _adtView.scrollDirection = UICollectionViewScrollDirectionVertical;
-    _adtView.onlyDisplayText = YES;
+    UIImageView * imgView = [[UIImageView alloc]init];
+    imgView.backgroundColor = KGray2Color;
+    [header addSubview:imgView];
     
-    NSMutableArray *titlesArray = [NSMutableArray new];
-    [titlesArray addObject:@"纯文字上下滚动轮播"];
-    [titlesArray addObject:@"纯文字上下滚动轮播 -- demo轮播图4"];
-    // [titlesArray addObjectsFromArray:titles];
-    _adtView.titlesGroup = [titlesArray copy];
-    [_adtView disableScrollGesture];
+    UILabel * tactic = [self adLableTitle:@"攻略"];
+    [header addSubview:tactic];
+    
+    UILabel * new = [self adLableTitle:@"新闻"];
+    [header addSubview:new];
+  
+    
+    self.advView.currentPageDotColor = [UIColor whiteColor]; // 自定义分页控件小圆标颜色
+    _adTacticView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectZero delegate:  self placeholderImage:nil];
+    [header addSubview:self.adTacticView];
+    _adTacticView.scrollDirection     = UICollectionViewScrollDirectionVertical;
+    _adTacticView.onlyDisplayText     = YES;
+    _adTacticView.titleLabelBackgroundColor = KWhiteColor;
+    _adTacticView.titleLabelTextColor = KGray2Color;
+    _adTacticView.titleLabelHeight    = 30;
+    [_adTacticView disableScrollGesture];
+    
+    
+    _adNewsView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectZero delegate:  self placeholderImage:nil];
+    [header addSubview:self.adNewsView];
+    _adNewsView.scrollDirection      = UICollectionViewScrollDirectionVertical;
+    _adNewsView.onlyDisplayText      = YES;
+    _adNewsView.titleLabelBackgroundColor = KWhiteColor;
+    _adNewsView.titleLabelTextColor = KGray2Color;
+    _adNewsView.titleLabelHeight     = 30;
+    [_adNewsView disableScrollGesture];
+    
+    
    
     self.advView.sd_layout
     .leftSpaceToView(header, 0)
@@ -137,41 +168,168 @@
     .rightSpaceToView(header, 0)
     .heightIs(Iphone6ScaleHeight * 100);
     
-    self.adtView.sd_layout
-    .leftSpaceToView(header, 0)
-    .topSpaceToView(self.cateCollectView, 0)
+    imgView.sd_layout
+    .topSpaceToView(self.cateCollectView, 5)
+    .leftSpaceToView(header, 10)
+    .bottomSpaceToView(header, 10)
+    .widthIs(80);
+    
+    tactic.sd_layout
+    .topSpaceToView(self.cateCollectView, 5)
+    .leftSpaceToView(imgView, 10)
+    .heightIs(15);
+    [tactic setSingleLineAutoResizeWithMaxWidth:80];
+    new.sd_layout
+    .topSpaceToView(tactic, 10)
+    .leftSpaceToView(imgView, 10)
+    .heightIs(15);
+    [new setSingleLineAutoResizeWithMaxWidth:80];
+    
+    self.adTacticView.sd_layout
+    .leftSpaceToView(new, 0)
+    .centerYEqualToView(tactic)
     .heightIs(25)
     .rightSpaceToView(header, 0);
-    [header setupAutoHeightWithBottomView:self.adtView bottomMargin:0];
+    self.adNewsView.sd_layout
+    .leftSpaceToView(new, 0)
+    .centerYEqualToView(new)
+    .heightIs(25)
+    .rightSpaceToView(header, 0);
+    
+    [header setupAutoHeightWithBottomView:new bottomMargin:10];
     [header layoutSubviews];
     self.tableView.tableHeaderView = header;
 }
+-(UILabel * )adLableTitle:(NSString *)title{
+    UILabel * tactic = [[UILabel alloc]init];
+    tactic.text = [NSString stringWithFormat: @" %@ ",title];
+    tactic.textColor = [UIColor redColor];
+    tactic.font =SYSTEMFONT(12);
+    tactic.layer.borderColor = KRedColor.CGColor;
+    tactic.layer.borderWidth =1;
 
-
-
+    tactic .sd_cornerRadius =@4;
+    return tactic;
+}
+- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index{
+    
+}
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+        return self.dataArr.count;
+}
 #pragma mark - tableview delegate / dataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.dataArr.count;
+    NSLog(@"section====%ld",section);
+    GMhomeBlockModel * model =self.dataArr[section];
+    if([model.type isEqualToString:@"topic_recommend"]){
+        
+        return 1;
+    
+    }else if ([model.type isEqualToString:@"today_recommend"]){
+    
+     
+        return 1 ;
+    
+    }else if ([model.type isEqualToString:@"game"]){
+   
+        NSArray * arr =model.data;
+    
+        return arr.count;
+    
+    }else if ([model.type isEqualToString:@"new_game"]){
+    
+        return 1;
+    
+    }else if ([model.type isEqualToString:@"news_recommend"]){
+    //        self.titleLab.autoHeight=0;
+    //        self.contentLab.autoHeight=0;
+    //        [self.collecView reloadData];
+    }
+    
+    return 0 ;
 }
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                                   reuseIdentifier:nil];
-    GMhomeRecommendModel * model = self.dataArr[indexPath.row];
-    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:model.image] placeholderImage:nil];
-    cell.textLabel.text = model.title;
-    return cell;
+    
+    GMhomeBlockModel * model =self.dataArr[indexPath.section];
+    
+    if ([model.type isEqualToString:@"game"]){
+        GMhomeGameCell   * cell = nil;
+        cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([GMhomeGameCell class])];
+        
+        NSArray * arr = model.data;
+        gameModel * model = [gameModel modelWithJSON:arr[indexPath.row]];
+        cell.gamemodel = model;
+          return  cell;
+    }else if ([model.type isEqualToString:@"new_game"]){
+        GMhomeNewGameCell * cell = nil;
+        cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([GMhomeNewGameCell class])];
+        
+        cell.gameNewmodel = model ;
+        return  cell;
+    }else{
+        
+        static NSString * identifer = @"identifer";
+        GMhomeExampleCell * cell =[tableView dequeueReusableCellWithIdentifier:NSStringFromClass([GMhomeExampleCell class])];
+        if(cell==nil){
+            cell = [[GMhomeExampleCell   alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifer ];
+            
+        }
+        
+    if([model.type isEqualToString:@"topic_recommend"]){
+        cell.model =self.dataArr[indexPath.section];
+          return  cell;
+    }else if ([model.type isEqualToString:@"today_recommend"]){
+         cell.model =self.dataArr[indexPath.section];
+       
+          return  cell;
+    }else if ([model.type isEqualToString:@"news_recommend"]){
+        //        self.titleLab.autoHeight=0;
+        //        self.contentLab.autoHeight=0;
+        //        [self.collecView reloadData];
+    }
+    }
+    UITableViewCell * cell =nil;
+    return  cell;
+        
+  
 }
-
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 60;
+    // >>>>>>>>>>>>>>>>>>>>> * cell自适应步骤2 * >>>>>>>>>>>>>>>>>>>>>>>>
+    /* model 为模型实例， keyPath 为 model 的属性名，通过 kvc 统一赋值接口 */
+    GMhomeBlockModel * model =self.dataArr[indexPath.section];
+    if([model.type isEqualToString:@"topic_recommend"]){
+    return [self.tableView cellHeightForIndexPath:indexPath model:self.dataArr[indexPath.section]  keyPath:@"model" cellClass:[GMhomeExampleCell class] contentViewWidth:[self cellContentViewWith]];
+    }else if ([model.type isEqualToString:@"today_recommend"]){
+       
+        return [self.tableView cellHeightForIndexPath:indexPath model:self.dataArr[indexPath.section]  keyPath:@"model" cellClass:[GMhomeExampleCell class] contentViewWidth:[self cellContentViewWith]];
+        
+        
+    }else if ([model.type isEqualToString:@"game"]){
+        NSArray * arr = model.data;
+        gameModel * model = [gameModel modelWithJSON:arr[indexPath.row]];
+       return [self.tableView cellHeightForIndexPath:indexPath model:model keyPath:@"gamemodel" cellClass:[GMhomeGameCell class] contentViewWidth:[self cellContentViewWith]];
+    }else if ([model.type isEqualToString:@"new_game"]){
+       
+       
+        return [self.tableView cellHeightForIndexPath:indexPath model: self.dataArr[indexPath.section]  keyPath:@"gameNewmodel" cellClass:[GMhomeNewGameCell class] contentViewWidth:[self cellContentViewWith]];
+        
+    }else if ([model.type isEqualToString:@"news_recommend"]){
+        //        self.titleLab.autoHeight=0;
+        //        self.contentLab.autoHeight=0;
+        //        [self.collecView reloadData];
+    }
+    return [self.tableView cellHeightForIndexPath:indexPath model:self.dataArr[indexPath.section]  keyPath:@"model" cellClass:[GMhomeExampleCell class] contentViewWidth:[self cellContentViewWith]];
 }
 
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{    NSArray * weathers = @[@"晴", @"多云", @"小雨", @"大雨", @"雪", @""];
+{
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];// 取消选中
+    NSArray * weathers = @[@"晴", @"多云", @"小雨", @"大雨", @"雪", @""];
      NSString *weather = weathers[arc4random() % weathers.count];
      if(!kiOSBefore){
         [self setAppIconWithName:weather];
@@ -203,20 +361,28 @@
     
         NSMutableArray * bannerArr = [NSMutableArray array];
         NSMutableArray * bannerTitle = [NSMutableArray array];
+        NSMutableArray * newArr = [NSMutableArray array];
+        NSMutableArray * newTactic = [NSMutableArray array];
         for (GMhomeBannerModel   * model in data.banner) {
             [bannerArr  addObject:model.image];
             [bannerTitle addObject:model.title];
-            
-        
-            
         }
-        [weakself.dataArr addObjectsFromArray:data.hot_recommend];
+        for(GMhomeRecommendModel  * model  in data.hot_recommend){
+            if([model.cate_name isEqualToString:@"新闻"]){
+                [newArr addObject: model.title];
+                
+            }else{
+                [newTactic addObject: model.title];
+            }
+        }
+        [weakself.dataArr addObjectsFromArray:data.block];
         [weakself.cateArr addObjectsFromArray:data.block];
         dispatch_async(dispatch_get_main_queue(), ^{
  
             weakself.advView.titlesGroup  = [bannerTitle copy];
             weakself.advView.imageURLStringsGroup = [bannerArr copy];
-            
+            weakself.adTacticView.titlesGroup = [newTactic copy];
+            weakself.adNewsView.titlesGroup   = [newArr copy];
             [weakself.cateCollectView reloadData];
             [weakself.tableView reloadData];
         });

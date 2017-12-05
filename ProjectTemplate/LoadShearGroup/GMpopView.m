@@ -31,7 +31,8 @@ static GMpopView * popView = nil;
     tagView .tag =1000;
     [window addSubview:tagView];
     tagView.sd_layout.spaceToSuperView(UIEdgeInsetsMake(0, 0, 0, 0 ));
-    tagView.backgroundColor =[[UIColor whiteColor]colorWithAlphaComponent:0.1];
+
+    tagView.backgroundColor = [UIColor colorWithWhite:0.5 alpha:0.5];
     
     [tagView addGestureRecognizer:[UITapGestureRecognizer getureRecognizerWithActionBlock:^(id gestureRecognizer) {
         
@@ -82,8 +83,8 @@ static GMpopView * popView = nil;
                                     horizontalEdgeInset:20];
     shearView.sd_layout
     .bottomSpaceToView(window, 60)
-    .leftSpaceToView(window, 10)
-    .rightSpaceToView(window, 10);
+    .leftSpaceToView(window, 40)
+    .rightSpaceToView(window, 40);
     UIButton  * btn  = [[UIButton alloc]init];
     btn.sd_cornerRadius=@10;
     btn.tag = 1002;
@@ -95,8 +96,8 @@ static GMpopView * popView = nil;
     btn.sd_layout
     .topSpaceToView(shearView, 10)
     .heightIs(40)
-    .leftSpaceToView(window, 10)
-    .rightSpaceToView(window, 10);
+    .leftSpaceToView(window, 40)
+    .rightSpaceToView(window, 40);
     
 }
 -(void)clearSubviews{
@@ -124,7 +125,7 @@ static GMpopView * popView = nil;
             }];
             break;
         case 2:
-            [GMloadType shareWithContent:[ShareContentItem shareShareContentItem] shareType:ShareTypeWeiXinTimeline shareResult:^(NSString *shareResult) {
+            [GMloadType shareWithContent:[ShareContentItem shareShareContentItem] shareType:ShareTypeWeiXinSession shareResult:^(NSString *shareResult) {
                 DLog(@"---%@", shareResult);
             }];
             break;
@@ -135,9 +136,10 @@ static GMpopView * popView = nil;
            
             break;
         case 4:
-            [GMloadType shareWithContent:[ShareContentItem shareShareContentItem] shareType:ShareTypeWeiXinSession shareResult:^(NSString *shareResult) {
+            [GMloadType shareWithContent:[ShareContentItem shareShareContentItem] shareType:ShareTypeWeiXinTimeline shareResult:^(NSString *shareResult) {
                 DLog(@"---%@", shareResult);
             }];
+            
             break;
         case 5:
             [GMloadType shareWithContent:[ShareContentItem shareShareContentItem] shareType:ShareTypeWeiBo shareResult:^(NSString *shareResult) {

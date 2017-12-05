@@ -7,8 +7,10 @@
 //
 
 #import "GMhomeCateCollectCell.h"
-#import <UIView+SDAutoLayout.h>
+
 #import "GMhomeBlockModel.h"
+#import "gameModel.h"
+
 @interface GMhomeCateCollectCell()
 
 @property (nonatomic,strong) UIImageView  * img;
@@ -49,5 +51,13 @@
 -(void)setModel:(GMhomeBlockModel *)model{
     _model =model;
     self.name.text =model.title;
+}
+
+-(void)setGamemodel:(gameModel *)gamemodel{
+    _gamemodel = gamemodel;
+    NSLog(@"%@",gamemodel .title);
+    [self.img sd_setImageWithURL:[NSURL URLWithString:gamemodel.image] placeholderImage:nil];
+    self.name.text =gamemodel.title;
+    
 }
 @end

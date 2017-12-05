@@ -40,5 +40,5 @@
 
 - (void)setSubviews ;
 - (CGFloat)naviGationH;
-
+- (CGFloat)cellContentViewWith;
 @end

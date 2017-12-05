@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-@class GMhomeBlockModel;
+@class GMhomeBlockModel,gameModel;
+
 @interface GMhomeCateCollectCell : UICollectionViewCell
 @property (nonatomic,strong)GMhomeBlockModel  * model;
-
+@property (nonatomic,strong)gameModel         * gamemodel;
 @end

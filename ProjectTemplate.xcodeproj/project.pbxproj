@@ -19,6 +19,8 @@
 		0E0410DE1F8B4994003657F8 /* model.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0410DD1F8B4994003657F8 /* model.m */; };
 		0E0410E11F8B4A3D003657F8 /* viewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0410E01F8B4A3D003657F8 /* viewModel.m */; };
 		0E0410E41F8B61D9003657F8 /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0410E31F8B61D9003657F8 /* HomeTableViewCell.m */; };
+		0E0430431FD4E0B00038F238 /* GMhomeNewGameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0430421FD4E0B00038F238 /* GMhomeNewGameCell.m */; };
+		0E0430471FD4E8720038F238 /* SegmentCate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0430461FD4E8720038F238 /* SegmentCate.m */; };
 		0E0ADCEF1F7CD22A009232F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0ADCEE1F7CD22A009232F8 /* main.m */; };
 		0E0ADCF51F7CD22A009232F8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0ADCF41F7CD22A009232F8 /* ViewController.m */; };
 		0E0ADCF81F7CD22A009232F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E0ADCF61F7CD22A009232F8 /* Main.storyboard */; };
@@ -63,6 +65,16 @@
 		0E4291351FD010C3007C77FF /* wechat_fav@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E4291291FD010C2007C77FF /* wechat_fav@3x.png */; };
 		0E4291361FD010C3007C77FF /* wechat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E42912A1FD010C2007C77FF /* wechat@2x.png */; };
 		0E4291371FD010C3007C77FF /* wechat@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E42912B1FD010C2007C77FF /* wechat@3x.png */; };
+		0E7AFE461FD0ECFA00E206CE /* news_recommendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7AFE451FD0ECFA00E206CE /* news_recommendModel.m */; };
+		0E7AFE491FD0EE7A00E206CE /* new_gameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7AFE481FD0EE7A00E206CE /* new_gameModel.m */; };
+		0E7AFE4C1FD0F08A00E206CE /* gameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7AFE4B1FD0F08A00E206CE /* gameModel.m */; };
+		0E7AFE521FD1037F00E206CE /* topicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7AFE511FD1037F00E206CE /* topicModel.m */; };
+		0E7AFE551FD12DFD00E206CE /* GMhomeTemplateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7AFE541FD12DFD00E206CE /* GMhomeTemplateView.m */; };
+		0E7AFE581FD1337000E206CE /* GMhomeImgViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7AFE571FD1337000E206CE /* GMhomeImgViewCell.m */; };
+		0E7AFE611FD133E800E206CE /* GMhomeImgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7AFE601FD133E800E206CE /* GMhomeImgCell.m */; };
+		0E7AFE641FD138FD00E206CE /* GMhomeExampleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7AFE631FD138FD00E206CE /* GMhomeExampleCell.m */; };
+		0E7AFE671FD15C6800E206CE /* today_recommendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7AFE661FD15C6800E206CE /* today_recommendModel.m */; };
+		0E7AFE701FD3F1B500E206CE /* GMhomeGameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7AFE6F1FD3F1B500E206CE /* GMhomeGameCell.m */; };
 		0E95DC261FCBA53600F5557D /* WRImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E95DC251FCBA53600F5557D /* WRImageHelper.m */; };
 		0E95DC451FCBB57800F5557D /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E95DC381FCBB57800F5557D /* TAAbstractDotView.m */; };
 		0E95DC461FCBB57800F5557D /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E95DC3A1FCBB57800F5557D /* TAAnimatedDotView.m */; };
@@ -139,6 +151,10 @@
 		0E0410E01F8B4A3D003657F8 /* viewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = viewModel.m; sourceTree = "<group>"; };
 		0E0410E21F8B61D9003657F8 /* HomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewCell.h; sourceTree = "<group>"; };
 		0E0410E31F8B61D9003657F8 /* HomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewCell.m; sourceTree = "<group>"; };
+		0E0430411FD4E0B00038F238 /* GMhomeNewGameCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMhomeNewGameCell.h; sourceTree = "<group>"; };
+		0E0430421FD4E0B00038F238 /* GMhomeNewGameCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMhomeNewGameCell.m; sourceTree = "<group>"; };
+		0E0430451FD4E8720038F238 /* SegmentCate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SegmentCate.h; sourceTree = "<group>"; };
+		0E0430461FD4E8720038F238 /* SegmentCate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SegmentCate.m; sourceTree = "<group>"; };
 		0E0ADCEA1F7CD22A009232F8 /* ProjectTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E0ADCEE1F7CD22A009232F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0E0ADCF31F7CD22A009232F8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../ViewController.h; sourceTree = "<group>"; };
@@ -203,6 +219,26 @@
 		0E4291291FD010C2007C77FF /* wechat_fav@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wechat_fav@3x.png"; sourceTree = "<group>"; };
 		0E42912A1FD010C2007C77FF /* wechat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wechat@2x.png"; sourceTree = "<group>"; };
 		0E42912B1FD010C2007C77FF /* wechat@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wechat@3x.png"; sourceTree = "<group>"; };
+		0E7AFE441FD0ECFA00E206CE /* news_recommendModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = news_recommendModel.h; sourceTree = "<group>"; };
+		0E7AFE451FD0ECFA00E206CE /* news_recommendModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = news_recommendModel.m; sourceTree = "<group>"; };
+		0E7AFE471FD0EE7A00E206CE /* new_gameModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = new_gameModel.h; sourceTree = "<group>"; };
+		0E7AFE481FD0EE7A00E206CE /* new_gameModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = new_gameModel.m; sourceTree = "<group>"; };
+		0E7AFE4A1FD0F08A00E206CE /* gameModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gameModel.h; sourceTree = "<group>"; };
+		0E7AFE4B1FD0F08A00E206CE /* gameModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gameModel.m; sourceTree = "<group>"; };
+		0E7AFE501FD1037F00E206CE /* topicModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = topicModel.h; sourceTree = "<group>"; };
+		0E7AFE511FD1037F00E206CE /* topicModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = topicModel.m; sourceTree = "<group>"; };
+		0E7AFE531FD12DFD00E206CE /* GMhomeTemplateView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMhomeTemplateView.h; sourceTree = "<group>"; };
+		0E7AFE541FD12DFD00E206CE /* GMhomeTemplateView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMhomeTemplateView.m; sourceTree = "<group>"; };
+		0E7AFE561FD1337000E206CE /* GMhomeImgViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMhomeImgViewCell.h; sourceTree = "<group>"; };
+		0E7AFE571FD1337000E206CE /* GMhomeImgViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMhomeImgViewCell.m; sourceTree = "<group>"; };
+		0E7AFE5F1FD133E800E206CE /* GMhomeImgCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMhomeImgCell.h; sourceTree = "<group>"; };
+		0E7AFE601FD133E800E206CE /* GMhomeImgCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMhomeImgCell.m; sourceTree = "<group>"; };
+		0E7AFE621FD138FD00E206CE /* GMhomeExampleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMhomeExampleCell.h; sourceTree = "<group>"; };
+		0E7AFE631FD138FD00E206CE /* GMhomeExampleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMhomeExampleCell.m; sourceTree = "<group>"; };
+		0E7AFE651FD15C6800E206CE /* today_recommendModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = today_recommendModel.h; sourceTree = "<group>"; };
+		0E7AFE661FD15C6800E206CE /* today_recommendModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = today_recommendModel.m; sourceTree = "<group>"; };
+		0E7AFE6E1FD3F1B500E206CE /* GMhomeGameCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMhomeGameCell.h; sourceTree = "<group>"; };
+		0E7AFE6F1FD3F1B500E206CE /* GMhomeGameCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMhomeGameCell.m; sourceTree = "<group>"; };
 		0E95DC241FCBA53600F5557D /* WRImageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRImageHelper.h; sourceTree = "<group>"; };
 		0E95DC251FCBA53600F5557D /* WRImageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRImageHelper.m; sourceTree = "<group>"; };
 		0E95DC371FCBB57800F5557D /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
@@ -353,6 +389,7 @@
 		0E04108C1F7CE85E003657F8 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				0E0430441FD4E7F10038F238 /* SegmentCate */,
 				0ECAA8881FCD0BBC00EA3AA0 /* GesterRecognizer */,
 				0E2B770F1FCBF2BE00524CD3 /* GMIconChange */,
 				0E95DC351FCBB57800F5557D /* SDCycleScrollView */,
@@ -439,6 +476,15 @@
 				0E0ADCF41F7CD22A009232F8 /* ViewController.m */,
 			);
 			path = viewController;
+			sourceTree = "<group>";
+		};
+		0E0430441FD4E7F10038F238 /* SegmentCate */ = {
+			isa = PBXGroup;
+			children = (
+				0E0430451FD4E8720038F238 /* SegmentCate.h */,
+				0E0430461FD4E8720038F238 /* SegmentCate.m */,
+			);
+			path = SegmentCate;
 			sourceTree = "<group>";
 		};
 		0E0ADCE11F7CD22A009232F8 = {
@@ -563,12 +609,30 @@
 				0ECAA88A1FCD0DAE00EA3AA0 /* GMhomeModel.m */,
 				0ECAA88C1FCD0F9100EA3AA0 /* GMhomeBannerModel.h */,
 				0ECAA88D1FCD0F9100EA3AA0 /* GMhomeBannerModel.m */,
-				0ECAA8911FCD393700EA3AA0 /* GMhomeBlockModel.h */,
-				0ECAA8921FCD393700EA3AA0 /* GMhomeBlockModel.m */,
 				0ECAA8941FCD3D1E00EA3AA0 /* GMhomeRecommendModel.h */,
 				0ECAA8951FCD3D1E00EA3AA0 /* GMhomeRecommendModel.m */,
+				0ECAA8911FCD393700EA3AA0 /* GMhomeBlockModel.h */,
+				0ECAA8921FCD393700EA3AA0 /* GMhomeBlockModel.m */,
+				0E7AFE431FD0EBCC00E206CE /* blockdatamodel */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		0E7AFE431FD0EBCC00E206CE /* blockdatamodel */ = {
+			isa = PBXGroup;
+			children = (
+				0E7AFE501FD1037F00E206CE /* topicModel.h */,
+				0E7AFE511FD1037F00E206CE /* topicModel.m */,
+				0E7AFE441FD0ECFA00E206CE /* news_recommendModel.h */,
+				0E7AFE451FD0ECFA00E206CE /* news_recommendModel.m */,
+				0E7AFE651FD15C6800E206CE /* today_recommendModel.h */,
+				0E7AFE661FD15C6800E206CE /* today_recommendModel.m */,
+				0E7AFE471FD0EE7A00E206CE /* new_gameModel.h */,
+				0E7AFE481FD0EE7A00E206CE /* new_gameModel.m */,
+				0E7AFE4A1FD0F08A00E206CE /* gameModel.h */,
+				0E7AFE4B1FD0F08A00E206CE /* gameModel.m */,
+			);
+			path = blockdatamodel;
 			sourceTree = "<group>";
 		};
 		0E95DC231FCBA53600F5557D /* WRImageHelper */ = {
@@ -692,8 +756,20 @@
 		0ECAA89B1FCD54A700EA3AA0 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				0E7AFE5F1FD133E800E206CE /* GMhomeImgCell.h */,
+				0E7AFE601FD133E800E206CE /* GMhomeImgCell.m */,
 				0ECAA89C1FCD54DB00EA3AA0 /* GMhomeCateCollectCell.h */,
 				0ECAA89D1FCD54DB00EA3AA0 /* GMhomeCateCollectCell.m */,
+				0E7AFE561FD1337000E206CE /* GMhomeImgViewCell.h */,
+				0E7AFE571FD1337000E206CE /* GMhomeImgViewCell.m */,
+				0E7AFE531FD12DFD00E206CE /* GMhomeTemplateView.h */,
+				0E7AFE541FD12DFD00E206CE /* GMhomeTemplateView.m */,
+				0E7AFE621FD138FD00E206CE /* GMhomeExampleCell.h */,
+				0E7AFE631FD138FD00E206CE /* GMhomeExampleCell.m */,
+				0E7AFE6E1FD3F1B500E206CE /* GMhomeGameCell.h */,
+				0E7AFE6F1FD3F1B500E206CE /* GMhomeGameCell.m */,
+				0E0430411FD4E0B00038F238 /* GMhomeNewGameCell.h */,
+				0E0430421FD4E0B00038F238 /* GMhomeNewGameCell.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -971,28 +1047,38 @@
 				0E95DC471FCBB57800F5557D /* TADotView.m in Sources */,
 				0E95DC451FCBB57800F5557D /* TAAbstractDotView.m in Sources */,
 				0E2B772B1FCD064600524CD3 /* GMmainVC.m in Sources */,
+				0E7AFE521FD1037F00E206CE /* topicModel.m in Sources */,
 				0E2B77121FCBF36000524CD3 /* UIViewController+Present.m in Sources */,
+				0E7AFE641FD138FD00E206CE /* GMhomeExampleCell.m in Sources */,
+				0E7AFE701FD3F1B500E206CE /* GMhomeGameCell.m in Sources */,
 				0E4291151FCF976B007C77FF /* ShareContentItem.m in Sources */,
 				0E0ADCF51F7CD22A009232F8 /* ViewController.m in Sources */,
+				0E0430431FD4E0B00038F238 /* GMhomeNewGameCell.m in Sources */,
 				0E04108B1F7CDFAF003657F8 /* RootBaseBar.m in Sources */,
 				0E2B772A1FCD064600524CD3 /* GMactivityVC.m in Sources */,
 				0E95DC481FCBB57800F5557D /* TAPageControl.m in Sources */,
 				0E0410A51F7D0653003657F8 /* UIImage+CompressImage.m in Sources */,
 				0ECAA88E1FCD0F9100EA3AA0 /* GMhomeBannerModel.m in Sources */,
+				0E7AFE4C1FD0F08A00E206CE /* gameModel.m in Sources */,
 				0E0410821F7CD78F003657F8 /* RootBaseVC.m in Sources */,
 				0ECAA89A1FCD480700EA3AA0 /* GMgiftVC.m in Sources */,
 				0E95DC4B1FCBB57800F5557D /* UIView+SDExtension.m in Sources */,
 				0E2B773B1FCD09A100524CD3 /* AppDelegate+AppService.m in Sources */,
 				0ECDC7DF1FCAF9D300FA4424 /* WRCustomNavigationBar.m in Sources */,
+				0E7AFE611FD133E800E206CE /* GMhomeImgCell.m in Sources */,
+				0E7AFE671FD15C6800E206CE /* today_recommendModel.m in Sources */,
 				0E0410E11F8B4A3D003657F8 /* viewModel.m in Sources */,
 				0E2B77351FCD07CF00524CD3 /* GMHomeRequest.m in Sources */,
 				0E04109F1F7CF0A4003657F8 /* MBProgressHUD+MB.m in Sources */,
+				0E7AFE551FD12DFD00E206CE /* GMhomeTemplateView.m in Sources */,
 				0ECAA89E1FCD54DB00EA3AA0 /* GMhomeCateCollectCell.m in Sources */,
 				0ECAA8BB1FCE690700EA3AA0 /* GMloadType.m in Sources */,
 				0E0410A41F7D0653003657F8 /* RequestManager.m in Sources */,
 				0E0410E41F8B61D9003657F8 /* HomeTableViewCell.m in Sources */,
 				0E0410DE1F8B4994003657F8 /* model.m in Sources */,
 				0ECAA8931FCD393700EA3AA0 /* GMhomeBlockModel.m in Sources */,
+				0E7AFE581FD1337000E206CE /* GMhomeImgViewCell.m in Sources */,
+				0E7AFE491FD0EE7A00E206CE /* new_gameModel.m in Sources */,
 				0E2B77291FCD064600524CD3 /* GMinfoVC.m in Sources */,
 				0E0410901F7CE8A4003657F8 /* OpenUDID.m in Sources */,
 				0ECDC7E01FCAF9D300FA4424 /* WRNavigationBar.m in Sources */,
@@ -1003,10 +1089,12 @@
 				0E95DC491FCBB57800F5557D /* SDCollectionViewCell.m in Sources */,
 				0E2B772E1FCD064600524CD3 /* GMmeVC.m in Sources */,
 				0E04107D1F7CD62B003657F8 /* baseModel.m in Sources */,
+				0E0430471FD4E8720038F238 /* SegmentCate.m in Sources */,
 				0E0ADCEF1F7CD22A009232F8 /* main.m in Sources */,
 				0E95DC461FCBB57800F5557D /* TAAnimatedDotView.m in Sources */,
 				0E95DC4A1FCBB57800F5557D /* SDCycleScrollView.m in Sources */,
 				0E0410AB1F8B0E51003657F8 /* UITapGestureRecognizer+Block.m in Sources */,
+				0E7AFE461FD0ECFA00E206CE /* news_recommendModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

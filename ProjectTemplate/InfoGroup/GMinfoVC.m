@@ -20,17 +20,14 @@
 @implementation GMinfoVC
 
 - (void)viewDidLoad {
-    [[GMpopView popView] popShearComtentItem:nil];
-    for(int i =0 ;i<10;i++){
-        UIButton * btn  = [[UIButton alloc]initWithFrame:CGRectMake(0,64+50*i, KScreenWidth, 60)];
-        [btn setTitle:[NSString stringWithFormat:@"==%d==",i] forState:UIControlStateNormal ];
-        btn.backgroundColor = [UIColor orangeColor];
-        btn.tag =i;
-        [btn addTarget:self action:@selector(select:) forControlEvents:UIControlEventTouchUpInside];
-        [self.view addSubview:btn];
-    }
+    
+    [self setNavLeftItemTitle:nil andImage:[UIImage imageNamed:@"rightNav"]];
+    [self setNavRightItemTitle:nil andImage:[UIImage imageNamed:@"rightNav"]];
   [super viewDidLoad];
 
+}
+-(void)rightItemClick:(id)sender{
+    [[GMpopView popView] popShearComtentItem:nil];
 }
 -(void)select:(UIButton *)sender{
     if (sender.tag == ShareTypeWeiBo) {
