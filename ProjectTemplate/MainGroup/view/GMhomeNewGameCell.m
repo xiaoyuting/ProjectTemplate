@@ -79,9 +79,9 @@
     _gameNewmodel = gameNewmodel  ;
     self.cateName.text =gameNewmodel.title;
     self.gameGroupmodel  = [new_gameModel modelWithJSON:gameNewmodel.data];
-    [gameNewmodel.data enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        
-    }];
+//    [gameNewmodel.data enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//        
+//    }];
     
     self.arr = self.gameGroupmodel.casualGaming;
     
