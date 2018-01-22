@@ -28,7 +28,7 @@
 }
 -(void)rightItemClick:(id)sender{
     [[GMpopView popView] popShearComtentItem:nil];
-     [[GMpopView popView] popShearComtentItem:nil];
+    
 }
 -(void)select:(UIButton *)sender{
     if (sender.tag == ShareTypeWeiBo) {
