@@ -1,9 +1,9 @@
 //
 //  ThirdMacros.h
-//  MiAiApp
+//  ProjectTemplate
 //
-//  Created by 徐阳 on 2017/5/18.
-//  Copyright © 2017年 徐阳. All rights reserved.
+//  Created by xy on 2017/11/26.
+//  Copyright © 2017年 yuting. All rights reserved.
 //
 
 //第三方配置
@@ -15,13 +15,14 @@
 #define UMengKey @"59281b4a5312dd3f5f0005ed"
 
 //微信
-#define kAppKey_Wechat          @"wx38ae805374bd9c73"
-#define kSecret_Wechat          @"b319a731d49e8c67eec203731d05dd45"
+#define kAppKey_Wechat          @"wx5939ba19b940fea1"
+#define kSecret_Wechat          @"9cee8335774c42ddaad7b0e74f2e7e5f"
 
 // 腾讯
-#define kAppKey_Tencent          @"1106139910"
-
-
+#define kAppKey_Tencent         @"1106274178" 
+#define kAppKey_sina            @""
+#define kSecret_sina            @""
+#define kSinaRedirectURI        @"https://www.sina.com"
 //网易云信
 #define kIMAppKey @"afc7265de3857bbaa7404b4ea92b191e"
 #define kIMAppSecret @"c34bd403b29a"

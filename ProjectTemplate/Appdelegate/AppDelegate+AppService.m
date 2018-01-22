@@ -8,6 +8,7 @@
 
 #import "AppDelegate+AppService.h"
 
+
 #import "OpenUDID.h"
 @implementation AppDelegate (AppService)
 #pragma mark ————— 初始化服务 —————
@@ -17,6 +18,7 @@
                                              selector:@selector(loginStateChange:)
                                                  name:KNotificationLoginStateChange
                                                object:nil];
+   [WXApi registerApp:kAppKey_Wechat enableMTA:YES];
    
 }
 
@@ -78,15 +80,50 @@
 
 
 
+// iOS9 以上用这个方法接收
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options
+{
+ 
+    if ([options[UIApplicationOpenURLOptionsSourceApplicationKey] isEqualToString:@"com.sina.weibo"]) {
+        
 
+        return [WeiboSDK handleOpenURL:url delegate:[GMloadType loadManager]];
+    }else if ([options[UIApplicationOpenURLOptionsSourceApplicationKey] isEqualToString:@"com.tencent.xin"]){
+
+        return [WXApi handleOpenURL:url delegate:[GMloadType   loadManager]];
+    }else if ([options[UIApplicationOpenURLOptionsSourceApplicationKey] isEqualToString:@"com.tencent.mqq"]){
+        
+          [QQApiInterface handleOpenURL:url delegate:[GMloadType loadManager]];
+        
+        return [TencentOAuth HandleOpenURL:url];
+    }
+    return YES;
+}
  #pragma mark ————— OpenURL 回调 —————
 // 支持所有iOS系统
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
+
     //6.3的新的API调用，是为了兼容国外平台(例如:新版facebookSDK,VK等)的调用[如果用6.2的api调用会没有回调],对国内平台没有影响
+    
+   
+    
+    if ([sourceApplication isEqualToString:@"com.sina.weibo"]) {
+        
+        return [WeiboSDK handleOpenURL:url delegate:[GMloadType loadManager]];
+        
+    }else if ([sourceApplication isEqualToString:@"com.tencent.xin"]){
+      
+        return [WXApi handleOpenURL:url delegate:[GMloadType loadManager]];
+        
+    }else if ([sourceApplication isEqualToString:@"com.tencent.mqq"]){
+        
+        [QQApiInterface handleOpenURL:url delegate:[GMloadType loadManager]];
+        return [TencentOAuth HandleOpenURL:url];
+    }
+    
     return YES;
 }
-
 
 + (AppDelegate *)shareAppDelegate{
     return (AppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -142,6 +179,8 @@
     }
     return superVC;
 }
+
+
 
 
 @end

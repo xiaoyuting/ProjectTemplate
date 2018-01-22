@@ -178,6 +178,15 @@ THE SOFTWARE.
 
 
 
+## WechatOpenSDK
+
+Copyright 2017 tencent.com. All rights reserved.
+
+
+## Weibo_SDK
+
+
+
 ## YTKKeyValueStore
 
 Copyright (c) 2012-2014 YTKKeyValueStore https://github.com/yuantiku

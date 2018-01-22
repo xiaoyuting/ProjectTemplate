@@ -13,7 +13,7 @@
                     failure:(void (^)(NSError *))failure
 {
     [RequestManager requestWithType:HttpRequestTypeGet
-                          urlString: @"http://demo.gm88.com/gateway/index.php"
+                          urlString: @"http://gm88.com/gateway/index.php"
                          parameters:@{
                                     
                                       @"action":@"index.home"

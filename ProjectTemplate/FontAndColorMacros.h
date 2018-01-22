@@ -1,9 +1,9 @@
 //
 //  FontAndColorMacros.h
-//  MiAiApp
+//  ProjectTemplate
 //
-//  Created by 徐阳 on 2017/5/18.
-//  Copyright © 2017年 徐阳. All rights reserved.
+//  Created by xy on 2017/11/26.
+//  Copyright © 2017年 yuting. All rights reserved.
 //
 
 //字体大小和颜色配置
