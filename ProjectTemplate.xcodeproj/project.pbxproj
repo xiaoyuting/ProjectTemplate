@@ -7,14 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E04107D1F7CD62B003657F8 /* baseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E04107C1F7CD62B003657F8 /* baseModel.m */; };
-		0E0410821F7CD78F003657F8 /* RootBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0410811F7CD78F003657F8 /* RootBaseVC.m */; };
 		0E0410881F7CDF02003657F8 /* RootBaseNav.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0410871F7CDF02003657F8 /* RootBaseNav.m */; };
 		0E04108B1F7CDFAF003657F8 /* RootBaseBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E04108A1F7CDFAF003657F8 /* RootBaseBar.m */; };
 		0E0410901F7CE8A4003657F8 /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E04108F1F7CE8A4003657F8 /* OpenUDID.m */; };
 		0E04109F1F7CF0A4003657F8 /* MBProgressHUD+MB.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E04109E1F7CF0A4003657F8 /* MBProgressHUD+MB.m */; };
 		0E0410A41F7D0653003657F8 /* RequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0410A11F7D0653003657F8 /* RequestManager.m */; };
-		0E0410A51F7D0653003657F8 /* UIImage+CompressImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0410A31F7D0653003657F8 /* UIImage+CompressImage.m */; };
 		0E0410AB1F8B0E51003657F8 /* UITapGestureRecognizer+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0410AA1F8B0E51003657F8 /* UITapGestureRecognizer+Block.m */; };
 		0E0410DE1F8B4994003657F8 /* model.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0410DD1F8B4994003657F8 /* model.m */; };
 		0E0410E11F8B4A3D003657F8 /* viewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0410E01F8B4A3D003657F8 /* viewModel.m */; };
@@ -22,7 +19,6 @@
 		0E0430431FD4E0B00038F238 /* GMhomeNewGameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0430421FD4E0B00038F238 /* GMhomeNewGameCell.m */; };
 		0E0430471FD4E8720038F238 /* SegmentCate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0430461FD4E8720038F238 /* SegmentCate.m */; };
 		0E0ADCEF1F7CD22A009232F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0ADCEE1F7CD22A009232F8 /* main.m */; };
-		0E0ADCF51F7CD22A009232F8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0ADCF41F7CD22A009232F8 /* ViewController.m */; };
 		0E0ADCF81F7CD22A009232F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E0ADCF61F7CD22A009232F8 /* Main.storyboard */; };
 		0E0ADCFA1F7CD22A009232F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E0ADCF91F7CD22A009232F8 /* Assets.xcassets */; };
 		0E0ADCFD1F7CD22A009232F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E0ADCFB1F7CD22A009232F8 /* LaunchScreen.storyboard */; };
@@ -99,6 +95,10 @@
 		0ECAA8BB1FCE690700EA3AA0 /* GMloadType.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECAA8BA1FCE690700EA3AA0 /* GMloadType.m */; };
 		0ECDC7DF1FCAF9D300FA4424 /* WRCustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECDC7DC1FCAF9D200FA4424 /* WRCustomNavigationBar.m */; };
 		0ECDC7E01FCAF9D300FA4424 /* WRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECDC7DE1FCAF9D200FA4424 /* WRNavigationBar.m */; };
+		87479781202A8C8F00474921 /* UIImage+CompressImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8747977F202A8C8F00474921 /* UIImage+CompressImage.m */; };
+		87479784202A8CC100474921 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87479782202A8CC100474921 /* ViewController.m */; };
+		8747978C202A8DE100474921 /* baseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8747978B202A8DE100474921 /* baseModel.m */; };
+		8747978F202A8DF100474921 /* RootBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8747978D202A8DF100474921 /* RootBaseVC.m */; };
 		EEBB49B88E9392129531F431 /* libPods-ProjectTemplate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A1FE9D5704539AB8B5446B /* libPods-ProjectTemplate.a */; };
 /* End PBXBuildFile section */
 
@@ -122,27 +122,16 @@
 /* Begin PBXFileReference section */
 		03397658B930F37387651DA7 /* Pods-ProjectTemplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectTemplate.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectTemplate/Pods-ProjectTemplate.release.xcconfig"; sourceTree = "<group>"; };
 		05794AB52E0AA51D77949FC5 /* Pods-ProjectTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectTemplate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectTemplate/Pods-ProjectTemplate.debug.xcconfig"; sourceTree = "<group>"; };
-		0E04107B1F7CD62B003657F8 /* baseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = baseModel.h; path = ../baseModel.h; sourceTree = "<group>"; };
-		0E04107C1F7CD62B003657F8 /* baseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = baseModel.m; path = ../baseModel.m; sourceTree = "<group>"; };
-		0E0410801F7CD78F003657F8 /* RootBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootBaseVC.h; path = ../RootBaseVC.h; sourceTree = "<group>"; };
-		0E0410811F7CD78F003657F8 /* RootBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootBaseVC.m; path = ../RootBaseVC.m; sourceTree = "<group>"; };
 		0E0410861F7CDF02003657F8 /* RootBaseNav.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootBaseNav.h; sourceTree = "<group>"; };
 		0E0410871F7CDF02003657F8 /* RootBaseNav.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootBaseNav.m; sourceTree = "<group>"; };
 		0E0410891F7CDFAF003657F8 /* RootBaseBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootBaseBar.h; sourceTree = "<group>"; };
 		0E04108A1F7CDFAF003657F8 /* RootBaseBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootBaseBar.m; sourceTree = "<group>"; };
 		0E04108E1F7CE8A4003657F8 /* OpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenUDID.h; sourceTree = "<group>"; };
 		0E04108F1F7CE8A4003657F8 /* OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
-		0E0410941F7CEC38003657F8 /* UtilsMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UtilsMacros.h; path = ../UtilsMacros.h; sourceTree = "<group>"; };
-		0E0410951F7CEC38003657F8 /* URLMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = URLMacros.h; path = ../URLMacros.h; sourceTree = "<group>"; };
-		0E0410961F7CEC38003657F8 /* CommonMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CommonMacros.h; path = ../CommonMacros.h; sourceTree = "<group>"; };
-		0E0410971F7CEC38003657F8 /* FontAndColorMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FontAndColorMacros.h; path = ../FontAndColorMacros.h; sourceTree = "<group>"; };
-		0E0410981F7CEC38003657F8 /* ThirdMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ThirdMacros.h; path = ../ThirdMacros.h; sourceTree = "<group>"; };
 		0E04109D1F7CF0A4003657F8 /* MBProgressHUD+MB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MB.h"; sourceTree = "<group>"; };
 		0E04109E1F7CF0A4003657F8 /* MBProgressHUD+MB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MB.m"; sourceTree = "<group>"; };
 		0E0410A01F7D0653003657F8 /* RequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestManager.h; path = ProjectTemplate/RequestManager.h; sourceTree = SOURCE_ROOT; };
 		0E0410A11F7D0653003657F8 /* RequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RequestManager.m; path = ProjectTemplate/RequestManager.m; sourceTree = SOURCE_ROOT; };
-		0E0410A21F7D0653003657F8 /* UIImage+CompressImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+CompressImage.h"; path = "../UIImage+CompressImage.h"; sourceTree = "<group>"; };
-		0E0410A31F7D0653003657F8 /* UIImage+CompressImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+CompressImage.m"; path = "../UIImage+CompressImage.m"; sourceTree = "<group>"; };
 		0E0410A91F8B0E51003657F8 /* UITapGestureRecognizer+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITapGestureRecognizer+Block.h"; sourceTree = "<group>"; };
 		0E0410AA1F8B0E51003657F8 /* UITapGestureRecognizer+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITapGestureRecognizer+Block.m"; sourceTree = "<group>"; };
 		0E0410DC1F8B4994003657F8 /* model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = model.h; sourceTree = "<group>"; };
@@ -157,8 +146,6 @@
 		0E0430461FD4E8720038F238 /* SegmentCate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SegmentCate.m; sourceTree = "<group>"; };
 		0E0ADCEA1F7CD22A009232F8 /* ProjectTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E0ADCEE1F7CD22A009232F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0E0ADCF31F7CD22A009232F8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../ViewController.h; sourceTree = "<group>"; };
-		0E0ADCF41F7CD22A009232F8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../ViewController.m; sourceTree = "<group>"; };
 		0E0ADCF71F7CD22A009232F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0E0ADCF91F7CD22A009232F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E0ADCFC1F7CD22A009232F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -285,6 +272,19 @@
 		0ECDC7DD1FCAF9D200FA4424 /* WRNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRNavigationBar.h; sourceTree = "<group>"; };
 		0ECDC7DE1FCAF9D200FA4424 /* WRNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRNavigationBar.m; sourceTree = "<group>"; };
 		65A1FE9D5704539AB8B5446B /* libPods-ProjectTemplate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ProjectTemplate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8747977F202A8C8F00474921 /* UIImage+CompressImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+CompressImage.m"; path = "ProjectTemplate/UIImage+CompressImage.m"; sourceTree = SOURCE_ROOT; };
+		87479780202A8C8F00474921 /* UIImage+CompressImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+CompressImage.h"; path = "ProjectTemplate/UIImage+CompressImage.h"; sourceTree = SOURCE_ROOT; };
+		87479782202A8CC100474921 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ProjectTemplate/ViewController.m; sourceTree = SOURCE_ROOT; };
+		87479783202A8CC100474921 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ProjectTemplate/ViewController.h; sourceTree = SOURCE_ROOT; };
+		87479785202A8CDB00474921 /* CommonMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonMacros.h; path = ProjectTemplate/CommonMacros.h; sourceTree = SOURCE_ROOT; };
+		87479786202A8CDB00474921 /* FontAndColorMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FontAndColorMacros.h; path = ProjectTemplate/FontAndColorMacros.h; sourceTree = SOURCE_ROOT; };
+		87479787202A8CDB00474921 /* URLMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = URLMacros.h; path = ProjectTemplate/URLMacros.h; sourceTree = SOURCE_ROOT; };
+		87479788202A8CDB00474921 /* UtilsMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UtilsMacros.h; path = ProjectTemplate/UtilsMacros.h; sourceTree = SOURCE_ROOT; };
+		87479789202A8CDB00474921 /* ThirdMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThirdMacros.h; path = ProjectTemplate/ThirdMacros.h; sourceTree = SOURCE_ROOT; };
+		8747978A202A8DE100474921 /* baseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = baseModel.h; path = ProjectTemplate/Base/baseModel.h; sourceTree = SOURCE_ROOT; };
+		8747978B202A8DE100474921 /* baseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = baseModel.m; path = ProjectTemplate/Base/baseModel.m; sourceTree = SOURCE_ROOT; };
+		8747978D202A8DF100474921 /* RootBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootBaseVC.m; path = ProjectTemplate/Base/rootVC/VcRoot/RootBaseVC.m; sourceTree = SOURCE_ROOT; };
+		8747978E202A8DF100474921 /* RootBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootBaseVC.h; path = ProjectTemplate/Base/rootVC/VcRoot/RootBaseVC.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -342,8 +342,8 @@
 		0E04107E1F7CD71E003657F8 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				0E04107B1F7CD62B003657F8 /* baseModel.h */,
-				0E04107C1F7CD62B003657F8 /* baseModel.m */,
+				8747978A202A8DE100474921 /* baseModel.h */,
+				8747978B202A8DE100474921 /* baseModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -351,21 +351,11 @@
 		0E04107F1F7CD73B003657F8 /* rootVC */ = {
 			isa = PBXGroup;
 			children = (
+				87479790202A937A00474921 /* VcRoot */,
 				0E0410851F7CDEAE003657F8 /* TabRoot */,
 				0E0410841F7CDE8E003657F8 /* NaviRoot */,
-				0E0410831F7CDE6C003657F8 /* VcRoot */,
 			);
 			path = rootVC;
-			sourceTree = "<group>";
-		};
-		0E0410831F7CDE6C003657F8 /* VcRoot */ = {
-			isa = PBXGroup;
-			children = (
-				0E0410801F7CD78F003657F8 /* RootBaseVC.h */,
-				0E0410811F7CD78F003657F8 /* RootBaseVC.m */,
-			);
-			name = VcRoot;
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		0E0410841F7CDE8E003657F8 /* NaviRoot */ = {
@@ -422,11 +412,11 @@
 		0E0410A61F7D0716003657F8 /* Define */ = {
 			isa = PBXGroup;
 			children = (
-				0E0410941F7CEC38003657F8 /* UtilsMacros.h */,
-				0E0410951F7CEC38003657F8 /* URLMacros.h */,
-				0E0410961F7CEC38003657F8 /* CommonMacros.h */,
-				0E0410971F7CEC38003657F8 /* FontAndColorMacros.h */,
-				0E0410981F7CEC38003657F8 /* ThirdMacros.h */,
+				87479785202A8CDB00474921 /* CommonMacros.h */,
+				87479786202A8CDB00474921 /* FontAndColorMacros.h */,
+				87479789202A8CDB00474921 /* ThirdMacros.h */,
+				87479787202A8CDB00474921 /* URLMacros.h */,
+				87479788202A8CDB00474921 /* UtilsMacros.h */,
 			);
 			path = Define;
 			sourceTree = "<group>";
@@ -436,8 +426,8 @@
 			children = (
 				0E0410A01F7D0653003657F8 /* RequestManager.h */,
 				0E0410A11F7D0653003657F8 /* RequestManager.m */,
-				0E0410A21F7D0653003657F8 /* UIImage+CompressImage.h */,
-				0E0410A31F7D0653003657F8 /* UIImage+CompressImage.m */,
+				87479780202A8C8F00474921 /* UIImage+CompressImage.h */,
+				8747977F202A8C8F00474921 /* UIImage+CompressImage.m */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -472,8 +462,8 @@
 		0E0410DB1F8B4965003657F8 /* viewController */ = {
 			isa = PBXGroup;
 			children = (
-				0E0ADCF31F7CD22A009232F8 /* ViewController.h */,
-				0E0ADCF41F7CD22A009232F8 /* ViewController.m */,
+				87479783202A8CC100474921 /* ViewController.h */,
+				87479782202A8CC100474921 /* ViewController.m */,
 			);
 			path = viewController;
 			sourceTree = "<group>";
@@ -827,6 +817,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		87479790202A937A00474921 /* VcRoot */ = {
+			isa = PBXGroup;
+			children = (
+				8747978E202A8DF100474921 /* RootBaseVC.h */,
+				8747978D202A8DF100474921 /* RootBaseVC.m */,
+			);
+			path = VcRoot;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -897,7 +896,7 @@
 				TargetAttributes = {
 					0E0ADCE91F7CD22A009232F8 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 85AV7L542H;
+						DevelopmentTeam = XHK8Y67733;
 						ProvisioningStyle = Automatic;
 					};
 					0E0ADD021F7CD22A009232F8 = {
@@ -1051,16 +1050,16 @@
 				0E2B77121FCBF36000524CD3 /* UIViewController+Present.m in Sources */,
 				0E7AFE641FD138FD00E206CE /* GMhomeExampleCell.m in Sources */,
 				0E7AFE701FD3F1B500E206CE /* GMhomeGameCell.m in Sources */,
+				8747978F202A8DF100474921 /* RootBaseVC.m in Sources */,
 				0E4291151FCF976B007C77FF /* ShareContentItem.m in Sources */,
-				0E0ADCF51F7CD22A009232F8 /* ViewController.m in Sources */,
 				0E0430431FD4E0B00038F238 /* GMhomeNewGameCell.m in Sources */,
 				0E04108B1F7CDFAF003657F8 /* RootBaseBar.m in Sources */,
 				0E2B772A1FCD064600524CD3 /* GMactivityVC.m in Sources */,
 				0E95DC481FCBB57800F5557D /* TAPageControl.m in Sources */,
-				0E0410A51F7D0653003657F8 /* UIImage+CompressImage.m in Sources */,
 				0ECAA88E1FCD0F9100EA3AA0 /* GMhomeBannerModel.m in Sources */,
+				87479781202A8C8F00474921 /* UIImage+CompressImage.m in Sources */,
+				8747978C202A8DE100474921 /* baseModel.m in Sources */,
 				0E7AFE4C1FD0F08A00E206CE /* gameModel.m in Sources */,
-				0E0410821F7CD78F003657F8 /* RootBaseVC.m in Sources */,
 				0ECAA89A1FCD480700EA3AA0 /* GMgiftVC.m in Sources */,
 				0E95DC4B1FCBB57800F5557D /* UIView+SDExtension.m in Sources */,
 				0E2B773B1FCD09A100524CD3 /* AppDelegate+AppService.m in Sources */,
@@ -1078,6 +1077,7 @@
 				0E0410DE1F8B4994003657F8 /* model.m in Sources */,
 				0ECAA8931FCD393700EA3AA0 /* GMhomeBlockModel.m in Sources */,
 				0E7AFE581FD1337000E206CE /* GMhomeImgViewCell.m in Sources */,
+				87479784202A8CC100474921 /* ViewController.m in Sources */,
 				0E7AFE491FD0EE7A00E206CE /* new_gameModel.m in Sources */,
 				0E2B77291FCD064600524CD3 /* GMinfoVC.m in Sources */,
 				0E0410901F7CE8A4003657F8 /* OpenUDID.m in Sources */,
@@ -1088,7 +1088,6 @@
 				0E2B773A1FCD09A100524CD3 /* AppDelegate.m in Sources */,
 				0E95DC491FCBB57800F5557D /* SDCollectionViewCell.m in Sources */,
 				0E2B772E1FCD064600524CD3 /* GMmeVC.m in Sources */,
-				0E04107D1F7CD62B003657F8 /* baseModel.m in Sources */,
 				0E0430471FD4E8720038F238 /* SegmentCate.m in Sources */,
 				0E0ADCEF1F7CD22A009232F8 /* main.m in Sources */,
 				0E95DC461FCBB57800F5557D /* TAAnimatedDotView.m in Sources */,
@@ -1256,13 +1255,13 @@
 			baseConfigurationReference = 05794AB52E0AA51D77949FC5 /* Pods-ProjectTemplate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 85AV7L542H;
+				DEVELOPMENT_TEAM = XHK8Y67733;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/yuting/ProjectTemplate/ProjectTemplate/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/gm/Desktop/ProjectTemplate/ProjectTemplate/PrefixHeader.pch;
 				INFOPLIST_FILE = ProjectTemplate/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1329,13 +1328,13 @@
 			baseConfigurationReference = 03397658B930F37387651DA7 /* Pods-ProjectTemplate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 85AV7L542H;
+				DEVELOPMENT_TEAM = XHK8Y67733;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/yuting/ProjectTemplate/ProjectTemplate/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/gm/Desktop/ProjectTemplate/ProjectTemplate/PrefixHeader.pch;
 				INFOPLIST_FILE = ProjectTemplate/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

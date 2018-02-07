@@ -39,6 +39,8 @@
 - (void)loadMoreData ;
 
 - (void)setSubviews ;
+
 - (CGFloat)naviGationH;
+
 - (CGFloat)cellContentViewWith;
 @end
