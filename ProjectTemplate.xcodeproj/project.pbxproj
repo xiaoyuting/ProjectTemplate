@@ -1326,7 +1326,7 @@
 					"-framework",
 					"\"WebP\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.ProjectTemplate;
+				PRODUCT_BUNDLE_IDENTIFIER = com.GMtest.ProjectTemplate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1400,7 +1400,7 @@
 					"-framework",
 					"\"WebP\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.ProjectTemplate;
+				PRODUCT_BUNDLE_IDENTIFIER = com.GMtest.ProjectTemplate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

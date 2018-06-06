@@ -4,7 +4,7 @@
 <dict>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>$(AppIdentifierPrefix)com.yutingxiao.ProjectTemplate</string>
+		<string>$(AppIdentifierPrefix)com.GMtest.ProjectTemplate</string>
 	</array>
 </dict>
 </plist>
