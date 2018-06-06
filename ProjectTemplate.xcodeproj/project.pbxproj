@@ -285,6 +285,7 @@
 		8747978B202A8DE100474921 /* baseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = baseModel.m; path = ProjectTemplate/Base/baseModel.m; sourceTree = SOURCE_ROOT; };
 		8747978D202A8DF100474921 /* RootBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootBaseVC.m; path = ProjectTemplate/Base/rootVC/VcRoot/RootBaseVC.m; sourceTree = SOURCE_ROOT; };
 		8747978E202A8DF100474921 /* RootBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootBaseVC.h; path = ProjectTemplate/Base/rootVC/VcRoot/RootBaseVC.h; sourceTree = SOURCE_ROOT; };
+		87FB8C1A20C68C7B00129C6F /* ProjectTemplate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProjectTemplate.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -502,6 +503,7 @@
 		0E0ADCEC1F7CD22A009232F8 /* ProjectTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				87FB8C1A20C68C7B00129C6F /* ProjectTemplate.entitlements */,
 				0ECAA8971FCD47DC00EA3AA0 /* GiftGroup */,
 				0E0410A71F7D072E003657F8 /* Request */,
 				0E04107A1F7CD60A003657F8 /* Base */,
@@ -898,6 +900,11 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = XHK8Y67733;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					0E0ADD021F7CD22A009232F8 = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -1255,13 +1262,14 @@
 			baseConfigurationReference = 05794AB52E0AA51D77949FC5 /* Pods-ProjectTemplate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ProjectTemplate/ProjectTemplate.entitlements;
 				DEVELOPMENT_TEAM = XHK8Y67733;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/gm/Desktop/ProjectTemplate/ProjectTemplate/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/gm/ProjectTemplate/ProjectTemplate/PrefixHeader.pch;
 				INFOPLIST_FILE = ProjectTemplate/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1318,7 +1326,7 @@
 					"-framework",
 					"\"WebP\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yutingxiao.ProjectTemplate;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.ProjectTemplate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1328,13 +1336,14 @@
 			baseConfigurationReference = 03397658B930F37387651DA7 /* Pods-ProjectTemplate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ProjectTemplate/ProjectTemplate.entitlements;
 				DEVELOPMENT_TEAM = XHK8Y67733;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/gm/Desktop/ProjectTemplate/ProjectTemplate/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/gm/ProjectTemplate/ProjectTemplate/PrefixHeader.pch;
 				INFOPLIST_FILE = ProjectTemplate/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1391,7 +1400,7 @@
 					"-framework",
 					"\"WebP\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yutingxiao.ProjectTemplate;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.ProjectTemplate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
